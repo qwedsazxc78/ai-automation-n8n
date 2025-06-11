@@ -1,4 +1,4 @@
-# n8n 基本 Docker Compose 設置
+# n8n Docker Compose 設置 in AWS
 
 用於運行 n8n 工作流自動化工具
 此配置為在 aws 運行 n8n 容器所需的基礎設置，並搭配 PostgreSQL 資料庫。
@@ -17,6 +17,7 @@
 複製範例環境檔案：
 
 ```bash
+   cd ~/ai-automation-n8n/cloud-ai/aws
    cp .env.example .env
 ```
 
