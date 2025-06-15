@@ -100,6 +100,12 @@
 27.  [n8n 語音 AI Agent 預約確認服務｜Retell + Twilio 打造 AI Call 客](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/27-voice-ai-agent-with-retell)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/dlEc01R2xaU)
 
+28.  [免費部署 n8n 到 AWS！Lightsail + Cloudflare 快速搞定｜Lightsail 3 個月 0 元購，新手也能輕鬆上手](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/28-deploy-n8n-in-aws)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/VsYy-1CHtns)
+
+29.  [[2025最新] Google Veo3 AI影片自動生成教學｜搭配 n8n 與 fal.ai 全流程實作](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/RtYkigYLfYE)
+
 ## 📺 [YouTube 教學頻道 Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
 
 ![Alex Hsieh 相談室 | AI Brain](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/docs/YT.png?raw=true)
