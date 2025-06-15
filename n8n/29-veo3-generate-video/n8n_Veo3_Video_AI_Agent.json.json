@@ -1,0 +1,580 @@
+{
+  "name": "n8n Veo3 影片生成 Video Idea Prompt AI Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## LLM - GPT 4.1\n\n",
+        "height": 220,
+        "width": 210,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        60,
+        340
+      ],
+      "id": "546b4fc4-9965-405e-b65f-894ee9ac9a56",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        140,
+        420
+      ],
+      "id": "3676ef9d-4899-473a-a3c8-bfdeba059458",
+      "name": "OpenAI 4.1",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 輸出格式\n",
+        "height": 220,
+        "width": 260,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        340,
+        340
+      ],
+      "id": "8d6f40f2-e053-45ce-b14b-0827bc8875f7",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"prompt\": {\n      \"type\": \"string\",\n      \"description\": \"A cinematic, enhanced English prompt for AI video generation.\"\n    },\n    \"raw_input\": {\n      \"type\": \"string\",\n      \"description\": \"The user's original idea or sentence.\"\n    },\n    \"style\": {\n      \"type\": \"string\",\n      \"description\": \"Visual style like 'cyberpunk', 'realistic', 'anime', etc.\"\n    },\n    \"mood\": {\n      \"type\": \"string\",\n      \"description\": \"The mood of the video, e.g., 'epic', 'dark', 'hopeful'.\"\n    }\n  },\n  \"required\": [\"prompt\", \"raw_input\"]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        440,
+        420
+      ],
+      "id": "2edc6448-25ef-4316-979c-89fbccd95e81",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "content": "# n8n Veo3 影片生成 Video Idea Prompt AI Agent\n\ngoogle deep mind veo. - https://deepmind.google/models/veo/ \nFal.ai API 文件 -  https://fal.ai/models/fal-ai/veo3/api?platform=http\nVideo Prompt Suggestion - https://blog.fal.ai/mastering-video-generation-with-veo-2-a-comprehensive-guide/\nPrompt Donwload - https://www.skool.com/ai-brain-alex/classroom/4965fcd6?md=29794444b3f5421bafc5a4bd60929fa8\n",
+        "height": 260,
+        "width": 2030
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -300
+      ],
+      "id": "292ff9f1-8c5b-43df-994c-fa2ac6b1a199",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        140
+      ],
+      "id": "91a8154f-66b7-407e-843f-532ada5c4c6b",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5f90ab7b-563c-45fe-ad34-decc0277aa5f",
+              "name": "input",
+              "value": "=運籌帷幄且勢在必得的生化人領導者眼睛冒著火光拿著冒出烈焰的劍，領導上百位生化人在月球上對地球虎視眈眈",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -60,
+        140
+      ],
+      "id": "bfb290a7-ce0e-4d9f-8621-6db97b78b40b",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.input }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=你是一位 AI 影片提示增強專家，專精於將原始的想像性輸入轉化為具有電影感、視覺豐富，並技術上優化的提示語，適用於 AI 影片生成工具。\n\n你的目標是：\n\n保留使用者輸入中的核心理念與情感。\n\n增加畫面的視覺深度與氛圍（例如：光線、動作、情緒、鏡頭類型）。\n\n使用動態且具有電影風格的語言，使畫面更具臨場感。\n\n輸出最終提示語時，請以英文呈現，以符合 AI 模型的需求。\n\n當你優化提示語時，請依照以下格式：\n\n場景描述（Scene Description）： 詳細描繪環境背景。\n\n角色細節（Character Details）： 延伸角色的外貌與動作描寫。\n\n鏡頭與光影（Camera & Lighting）： 加入電影感的元素，如鏡頭角度、燈光、動作。\n\n情緒與風格（Mood & Style）： 明確指出情緒氛圍（史詩、陰鬱、希望等）與視覺風格（賽博龐克、寫實、動畫風等）。\n\n\n\n### 🧪 Example Input:\n運籌帷幄且勢在必得的生化人領導者眼睛冒著火光拿著冒出烈焰的劍，領導上百位生化人在月球上對地球虎視眈眈\n\n---\n\n### ✅ Example Output (English Prompt for Video Generation):\n\n\"A commanding cyborg warlord stands on the dusty surface of the Moon under a cold, blue-tinted sky. His glowing red eyes burn with intensity as he raises a blazing, flame-wreathed sword overhead. Behind him, hundreds of armored cyborg soldiers await orders in perfect formation. The Earth looms large on the horizon, shimmering in the distance. Cinematic wide shot, dramatic lighting, sci-fi war atmosphere, high contrast, slow pan from below, in 4K ultra detail.\""
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        180,
+        140
+      ],
+      "id": "3dd099a0-f6d6-4ce9-a4b9-19dff2c05620",
+      "name": "Video Idea Prompt AI Agent"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://queue.fal.run/fal-ai/veo3",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"prompt\": \"{{ $json.output.prompt }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        140
+      ],
+      "id": "62fc44b5-b953-4ad3-96b0-d64a0e7de540",
+      "name": "Fal.ai Veo3 API",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "6b3gGgQj3knRg1pu",
+          "name": "Header Auth - Fal.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        140
+      ],
+      "id": "c5b0317b-8aa9-4a89-b790-16cb1e59ad1d",
+      "name": "Wait 10s",
+      "webhookId": "74fd9461-6500-4759-9a91-b81c880dc0f0"
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}/status",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        140
+      ],
+      "id": "cc3ddbfc-24f0-4ed1-a607-c64131f9145c",
+      "name": "Fal.ai Veo3 API - Task",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "6b3gGgQj3knRg1pu",
+          "name": "Header Auth - Fal.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d882119f-0e7f-448f-bdf6-c7ad81937427",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "COMPLETED",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1320,
+        140
+      ],
+      "id": "3802de63-3907-4cd6-af81-c55de8e5f6a6",
+      "name": "If"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1320,
+        360
+      ],
+      "id": "2a6691ee-7f55-4045-b48a-de3d9ce1560a",
+      "name": "5s",
+      "webhookId": "0b6fa6b0-7ff6-4af4-8ca4-8b5e8e20b1e5"
+    },
+    {
+      "parameters": {
+        "sendTo": "=ai.brain.alex@gmail.com",
+        "subject": "=Veo3 影片自動化生成完成摟！",
+        "emailType": "text",
+        "message": "=Hi!\n\nVeo3 影片自動化生成完成\ninput: {{ $('Edit Fields').first().json.input }}\nPrompt: {{ $('Video Idea Prompt AI Agent').first().json.output.prompt }}\n\nvideo - {{ $json.video.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1800,
+        120
+      ],
+      "id": "29079081-4e42-44e1-bab4-0e455c875a39",
+      "name": "Gmail",
+      "webhookId": "d4f162ff-3aee-49a6-82c2-336b0f602344",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.video.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1800,
+        320
+      ],
+      "id": "3cd36be9-a833-4fff-8073-c42ad17353c4",
+      "name": "Get Video"
+    },
+    {
+      "parameters": {
+        "name": "=Veo3影片-{{ $now }}.mp4\n",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "https://drive.google.com/drive/folders/1VDzyKsNo2C505ORY8XYDbIjcQxVTjmCG",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2000,
+        320
+      ],
+      "id": "e8113e40-94d6-4262-840d-240d329b9455",
+      "name": "Upload Generated Video",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FOJsxE5vAvlfyH16",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 紀錄生成結果，傳送Email，備份影片到 google drive\n\n",
+        "height": 580,
+        "width": 590,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        -20
+      ],
+      "id": "af6b4e93-f0ad-4bb3-bd07-1c16f030462d",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "# 產生新的展示影片 - Veo3 with Fal.ai",
+        "height": 580,
+        "width": 1230,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        640,
+        -20
+      ],
+      "id": "22267d9c-d973-43b0-8a5e-4112ae0f7804",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "url": "=https://queue.fal.run/fal-ai/veo3/requests/{{ $json.request_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1560,
+        140
+      ],
+      "id": "8ce38e2c-ed91-4c51-b937-8c74396a2f02",
+      "name": "Fal.ai Veo3 API - Video URL",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "6b3gGgQj3knRg1pu",
+          "name": "Header Auth - Fal.ai"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# n8n Veo3 影片生成 Video Prompt AI Agent\n\n\n",
+        "height": 580,
+        "width": 1110,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        -20
+      ],
+      "id": "f44fd227-6ab6-44d3-834b-86b99f084a57",
+      "name": "Sticky Note4"
+    }
+  ],
+  "pinData": {
+    "Fal.ai Veo3 API": [
+      {
+        "json": {
+          "status": "IN_QUEUE",
+          "request_id": "27fb58af-bb33-4617-937e-904454101e21",
+          "response_url": "https://queue.fal.run/fal-ai/veo3/requests/27fb58af-bb33-4617-937e-904454101e21",
+          "status_url": "https://queue.fal.run/fal-ai/veo3/requests/27fb58af-bb33-4617-937e-904454101e21/status",
+          "cancel_url": "https://queue.fal.run/fal-ai/veo3/requests/27fb58af-bb33-4617-937e-904454101e21/cancel",
+          "logs": null,
+          "metrics": {},
+          "queue_position": 0
+        }
+      }
+    ]
+  },
+  "connections": {
+    "OpenAI 4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Video Idea Prompt AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Video Idea Prompt AI Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Video Idea Prompt AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Fal.ai Veo3 API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Video Idea Prompt AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fal.ai Veo3 API": {
+      "main": [
+        [
+          {
+            "node": "Wait 10s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 10s": {
+      "main": [
+        [
+          {
+            "node": "Fal.ai Veo3 API - Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Fal.ai Veo3 API - Video URL",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "5s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fal.ai Veo3 API - Task": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5s": {
+      "main": [
+        [
+          {
+            "node": "Fal.ai Veo3 API - Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video": {
+      "main": [
+        [
+          {
+            "node": "Upload Generated Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fal.ai Veo3 API - Video URL": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "678be441-7410-4ea9-8f81-8c8034283811",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98fc6998a4fc974191a50fd1e28f3c93149311bffb0a029723a4889a4111c908"
+  },
+  "id": "jCjrnY7EGRioohct",
+  "tags": [
+    {
+      "createdAt": "2025-01-21T07:13:36.575Z",
+      "updatedAt": "2025-01-21T07:13:36.575Z",
+      "id": "yM2YsERN8eAqo2ZC",
+      "name": "ai-agent"
+    },
+    {
+      "createdAt": "2025-03-17T08:20:06.861Z",
+      "updatedAt": "2025-03-17T08:20:06.861Z",
+      "id": "pvRmfUcHdkTEgrk9",
+      "name": "yt"
+    },
+    {
+      "createdAt": "2025-03-17T08:20:09.856Z",
+      "updatedAt": "2025-03-17T08:20:09.856Z",
+      "id": "Xk0zSy3b5bn7QLYA",
+      "name": "mcp"
+    }
+  ]
+}
