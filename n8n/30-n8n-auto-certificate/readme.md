@@ -1,4 +1,4 @@
-# 老師必學！用 n8n 自動化寄發完課證明，10分鐘打造自動化工作流
+# 老師必學！用 n8n 自動化寄發客製化證書，10分鐘打造自動化工作流
 
 ![自動化寄發課程完課證明](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/30-n8n-auto-certificate/cover.png?raw=true)
 

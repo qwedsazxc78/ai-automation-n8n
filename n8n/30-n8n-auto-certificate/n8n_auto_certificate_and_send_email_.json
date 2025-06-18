@@ -1,0 +1,813 @@
+{
+  "name": "n8n 完課證書 + Email 通知",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1df2d618-1c2b-473c-8382-7634582cd07c",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2080,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "0b84f22d-3f97-4db9-b5d3-7fa643896444",
+              "leftValue": "={{ $json.Status }}",
+              "rightValue": "Sent",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "8950dd17-ca8b-48fa-b969-7d677dc43c48",
+      "name": "判斷：已有憑證？",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -1380,
+        40
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "https://docs.google.com/presentation/d/1xeP0xbNjhtaFJ1m3O91UtPgc07V5bLNhOAayfYPQnnM",
+          "mode": "url"
+        },
+        "options": {
+          "name": "={{ $json['Student Name'] }} 證書 - {{ $now.format('yyyy-MM-dd') }}"
+        }
+      },
+      "id": "ce323cb9-dce2-46c5-9e73-c5ded55f5709",
+      "name": "Drive – 複製 Slide 範本",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 2,
+      "position": [
+        -1160,
+        40
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FOJsxE5vAvlfyH16",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "e2beee46-2c57-4f8b-a9b6-3b5d56cc51e6",
+              "leftValue": "={{ $json.Status }}",
+              "rightValue": "Create",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3c197862-1d46-4ddc-a4d6-cf097edaec63",
+      "name": "判斷：可寄送？",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Loop Over Items').item.json['Student Email'] }}",
+        "subject": "={{ $('Loop Over Items').item.json['Student Name'] }} - 恭喜你！",
+        "emailType": "text",
+        "message": "=恭喜你完成學程！提供證明給你",
+        "options": {
+          "appendAttribution": false,
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {}
+            ]
+          }
+        }
+      },
+      "id": "5be864aa-b8e3-4814-b140-2d03fa14d6bb",
+      "name": "Gmail – 寄送憑證",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        -60,
+        120
+      ],
+      "webhookId": "bbf8a4f1-acd1-4890-8d12-2144e25f7923",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1600,
+        180
+      ],
+      "id": "1d586073-2e6d-4096-9ea5-fd11fc294102",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "List",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1820,
+        180
+      ],
+      "id": "69b57766-4386-41fe-aeb2-9245f9d89480",
+      "name": "Google Sheets - 尚未傳送",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "replaceText",
+        "presentationId": "={{ $json.id }}",
+        "textUi": {
+          "textValues": [
+            {
+              "matchCase": true,
+              "pageObjectIds": [
+                "gc6f8f3c68_0_0"
+              ],
+              "text": "=Student Name",
+              "replaceText": "={{ $('Loop Over Items').item.json['Student Name'] }}"
+            },
+            {
+              "matchCase": true,
+              "pageObjectIds": [
+                "gc6f8f3c68_0_0"
+              ],
+              "text": "=Title",
+              "replaceText": "={{ $('Loop Over Items').item.json['Title'] }}"
+            },
+            {
+              "matchCase": true,
+              "pageObjectIds": [
+                "gc6f8f3c68_0_0"
+              ],
+              "text": "Your Name",
+              "replaceText": "={{ $('Loop Over Items').item.json['Student Name'] }}"
+            },
+            {
+              "matchCase": true,
+              "pageObjectIds": [
+                "gc6f8f3c68_0_0"
+              ],
+              "text": "Company Name",
+              "replaceText": "={{ $('Loop Over Items').item.json['Company Name'] }}"
+            },
+            {
+              "matchCase": true,
+              "pageObjectIds": [
+                "gc6f8f3c68_0_0"
+              ],
+              "text": "Date",
+              "replaceText": "=日期: {{ $('Loop Over Items').item.json['Date'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSlides",
+      "typeVersion": 2,
+      "position": [
+        -940,
+        40
+      ],
+      "id": "d7d19b79-9c5f-4d48-86f5-490ae5840022",
+      "name": "Google Slides",
+      "credentials": {
+        "googleSlidesOAuth2Api": {
+          "id": "VXHPn3tFCjvO1w6A",
+          "name": "Google Slides account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "List",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Student Email": "={{ $('Loop Over Items').item.json['Student Email'] }}",
+            "Status": "Create"
+          },
+          "matchingColumns": [
+            "Student Email"
+          ],
+          "schema": [
+            {
+              "id": "Student Name",
+              "displayName": "Student Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Manager Name",
+              "displayName": "Manager Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Student Email",
+              "displayName": "Student Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Student Slide",
+              "displayName": "Student Slide",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -720,
+        40
+      ],
+      "id": "1f79c457-4acc-46ee-bd2e-e475b8bd5ab1",
+      "name": "Google Sheets - Update Status",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $('Drive – 複製 Slide 範本').item.json.id }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "application/pdf",
+              "slidesToFormat": "application/pdf"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -280,
+        120
+      ],
+      "id": "61f5f6a9-f19d-401c-be20-114a054a7a30",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FOJsxE5vAvlfyH16",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "List",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TaotKDQygA1O02NkRqVedRUwGFG0lEbxR1sMLPThcFc/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Student Email": "={{ $('Loop Over Items').item.json['Student Email'] }}",
+            "Status": "Sent",
+            "Student Slide": "={{ $('Google Slides').item.json.presentationId }}"
+          },
+          "matchingColumns": [
+            "Student Email"
+          ],
+          "schema": [
+            {
+              "id": "Student Name",
+              "displayName": "Student Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Manager Name",
+              "displayName": "Manager Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Company Name",
+              "displayName": "Company Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Student Email",
+              "displayName": "Student Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Student Slide",
+              "displayName": "Student Slide",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        180,
+        200
+      ],
+      "id": "f96e0c71-06a6-4084-bb0c-10421d59c9ad",
+      "name": "Google Sheets - Update Sent",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Step-1 讀取學員名單，手動或 8am 寄出",
+        "height": 640,
+        "width": 500,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2160,
+        -160
+      ],
+      "id": "a3875697-09cc-4c2f-8c97-99f213f43054",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Step-2 客製化學員證書，並修改狀態\n修改為 create 狀態",
+        "height": 640,
+        "width": 1100,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1660,
+        -160
+      ],
+      "id": "be4d7d9a-641d-4c2b-817f-fb1a4847b8aa",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Step-3 郵件寄送證書給學員\n修改Sent狀態",
+        "height": 640,
+        "width": 880,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        -160
+      ],
+      "id": "c9f9967e-e764-49d1-8d5f-6e38faf6bf87",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# 老師必學｜用 n8n 自動化寄發課程完課證明\n\n## 問題：\n大家都知道，開完課、結束訓練後，最花時間的就是發證書！\n學員催你、你手忙腳亂，一個沒注意還漏寄！\n\n\n## 方法\n現在用 n8n，只要設定好流程，學員一完課，\n系統自動抓名單、填資料，PDF 證書自動生成並寄出，\n你還能自己客製內容、附加成績或評語，全部自動化零出錯！\n\n## 🎓 學習與社群\n\n* 🔗 [加入 AI 學習社群 (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)\n* [skool 課程教學連結](https://www.skool.com/ai-brain-alex/classroom/4965fcd6?md=ec91451441dd4ec69f7d78318126b926)",
+        "height": 460,
+        "width": 1900
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1960,
+        -640
+      ],
+      "id": "c99fc347-ccdd-4dc1-a972-b1dfa99416cf",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2080,
+        0
+      ],
+      "id": "1da700a8-b67c-4951-948b-1df62af81bbe",
+      "name": "8am"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - 尚未傳送",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判斷：已有憑證？": {
+      "main": [
+        [
+          {
+            "node": "Drive – 複製 Slide 範本",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Drive – 複製 Slide 範本": {
+      "main": [
+        [
+          {
+            "node": "Google Slides",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "判斷：可寄送？": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail – 寄送憑證": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Update Sent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "判斷：已有憑證？",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - 尚未傳送": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Slides": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Update Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Update Status": {
+      "main": [
+        [
+          {
+            "node": "判斷：可寄送？",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Gmail – 寄送憑證",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Update Sent": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "8am": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - 尚未傳送",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Taipei",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "9011f70a-c5b5-4810-bc42-16f593bfa1ac",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98fc6998a4fc974191a50fd1e28f3c93149311bffb0a029723a4889a4111c908"
+  },
+  "id": "7p8AEJERHekTX20S",
+  "tags": [
+    {
+      "createdAt": "2025-02-08T08:50:12.969Z",
+      "updatedAt": "2025-02-08T08:50:12.969Z",
+      "id": "MsjujtEapjDx89km",
+      "name": "YT"
+    },
+    {
+      "createdAt": "2025-02-10T07:08:57.753Z",
+      "updatedAt": "2025-02-10T07:08:57.753Z",
+      "id": "mskXWa7kgjAUGYID",
+      "name": "ai-brain"
+    }
+  ]
+}
