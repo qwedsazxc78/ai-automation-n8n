@@ -108,7 +108,7 @@
 29.  [[2025最新] Google Veo3 AI影片自動生成教學｜搭配 n8n 與 fal.ai 全流程實作](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/RtYkigYLfYE)
 
-30.  [老師必學！用 n8n 自動化寄發完課證明，10分鐘打造自動化工作流](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
+30.  [老師必學！用 n8n 自動化寄發客製化證書，10分鐘打造自動化工作流](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/RtYkigYLfYE)
 
 ## 📺 [YouTube 教學頻道 Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
