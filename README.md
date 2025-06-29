@@ -114,7 +114,7 @@
 31.  [使用 NotebookLM 半年，我領悟到的5個生產力加倍的功能](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/31-5-tips-notebooklm)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/FgpKdrYiu_8)
 
-32.  [老師必學！用 n8n 自動化寄發客製化證書，10分鐘打造自動化工作流](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
+32.  [4 個 n8n 提升 mail 生產力的技巧，立馬節省我 50% 處理郵件時間](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/ZFPW8Onnnf0)
 
 ## 📺 [YouTube 教學頻道 Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
