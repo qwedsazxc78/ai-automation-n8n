@@ -1,0 +1,1883 @@
+{
+  "name": "zerobox v1.0",
+  "nodes": [
+    {
+      "parameters": {
+        "resource": "label",
+        "operation": "create",
+        "name": "={{ $json['狀態'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -1220,
+        300
+      ],
+      "id": "7d7674ae-98d6-49bb-9ec0-f00943c37806",
+      "name": "Gmail",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 15,
+              "unit": "minutes"
+            }
+          ]
+        },
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ],
+          "q": "has:nouserlabels"
+        }
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -540,
+        1900
+      ],
+      "id": "3ced02ac-7744-4b8c-85f3-336b88deeaa1",
+      "name": "Gmail Trigger",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2580,
+        1680
+      ],
+      "id": "b7ad5195-4f88-4372-a412-095d096564fe",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1440,
+        300
+      ],
+      "id": "5fe50177-ddd9-4961-a5f8-b5e9384f8d24",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "狀態",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1660,
+        300
+      ],
+      "id": "093cf087-aeb2-495a-9fce-4bbf9e059645",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "operation": "create",
+        "name": "={{ $json['類別'] }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -1220,
+        560
+      ],
+      "id": "44382109-dff0-4754-b30d-554b355d2f14",
+      "name": "Gmail1",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -1440,
+        560
+      ],
+      "id": "45415ad5-04bd-44f8-a95b-4a99c03723ca",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 31786410,
+          "mode": "list",
+          "cachedResultName": "類別",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit#gid=31786410"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1660,
+        560
+      ],
+      "id": "d6a23624-628e-488f-b2fc-8bc27e88a578",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "simple": false,
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ],
+          "q": "has:nouserlabels"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -300,
+        2140
+      ],
+      "id": "ab8b78d4-450a-437f-addb-4df9cef65f41",
+      "name": "Gmail2",
+      "webhookId": "d60a5d65-4599-4c2a-8109-dea757e50576",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_28"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        1420
+      ],
+      "id": "9743789d-7d99-4743-9120-ad1727763f5c",
+      "name": "Gmail3",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_29"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        1700
+      ],
+      "id": "32f7f454-9393-43c9-8ac8-2435450fe655",
+      "name": "Gmail4",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_30"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        1920
+      ],
+      "id": "7de0f0e4-5fc4-4a4a-9773-30a882811313",
+      "name": "Gmail5",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_31"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        2080
+      ],
+      "id": "4d32f366-f58d-44ce-8c42-4b0ca1c41b4e",
+      "name": "Gmail6",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_32"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        740,
+        2240
+      ],
+      "id": "f9e10677-611d-4454-af02-ebb8f293f73f",
+      "name": "Gmail7",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "content": "# 設定分類標籤",
+        "height": 740,
+        "width": 1000
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1880,
+        100
+      ],
+      "id": "e05f26a5-479a-41fb-bb9a-a4eb89ac2c3d",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -80,
+        2140
+      ],
+      "id": "785e1cff-191c-4d6a-8d6c-e1652715709b",
+      "name": "Loop Over message"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-nano",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-nano"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1044,
+        1060
+      ],
+      "id": "2fcffe62-3887-4dc9-93c0-9fd2184aabc4",
+      "name": "OpenAI 4.1-nano",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputText": "={{ $json.Content }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "[01]-確認",
+              "description": "表示這封信件需要被「認真確認」方便完成後續行動（如記入代辦事項、日曆或筆記中）"
+            },
+            {
+              "category": "[02]-交辦",
+              "description": "這類郵件需要你指派給他人，如主管回覆、請同事處理等。"
+            },
+            {
+              "category": "[03]-追蹤",
+              "description": "這些郵件你已處理，但還有後續要追蹤，例如：  你交辦的事還沒完成  等候客戶回覆  預約尚未確認"
+            },
+            {
+              "category": "[04]-封存",
+              "description": "郵件無需立即處理、無需回覆，但仍具備參考價值。"
+            },
+            {
+              "category": "[05]-刪除",
+              "description": "垃圾信、重複行銷郵件、無內容信件等，不具參考價值。"
+            }
+          ]
+        },
+        "options": {
+          "systemPromptTemplate": "=Please classify the email text provided by the user into one of the following categories: {categories}, and use the provided formatting instructions below. Don't explain, and only output the json. make sure only output one status\n\n# Requirement\n\n## [05]-刪除 as true condtition\nnot to important email content or when content contain below text\n- Udemy Instructor\n- Google 快訊 - 每日摘要\n- 您已在 Zeabur 獲得 $5 的推薦獎勵\n- Notion Team - A new device logged into your account\n- Workflow Error Notification\n- 博客來單品折價券發放通知\n- Cloudflare Web Analytics\n- 統一證存股約定提醒通知\n- from Google Developers <GoogleDevelopers-noreply@google.com>\n- Google Notifications <notify-noreply@google.com>\n- 登入通知\n\n## [03]-追蹤 as true condtition\nemail should be track status or following up\n\n## [04]-封存 as true condtition\nemail should keep in mind or when content contain below text\n- Amazon Web Services Tax Invoice Available\n- Invoice\n- 優惠券 / coupon\n\n## [02]-交辦 as true condtition\nemail should be delegate to the other person\n\n## [01]-確認 as true condtition\ndefault condition or or when content contain below text\n- tax 稅務單\n\n\n",
+          "enableAutoFixing": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        360,
+        1520
+      ],
+      "id": "c574b494-aa16-4d3d-92ec-4669b97e76d3",
+      "name": "Status Text Classifier",
+      "alwaysOutputData": false,
+      "executeOnce": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "inputText": "={{ $('Email').item.json.Content }}",
+        "categories": {
+          "categories": [
+            {
+              "category": "[11]-Invoice",
+              "description": "發票、付款、請款、報帳等財務相關"
+            },
+            {
+              "category": "[12]-Newsletter",
+              "description": "訂閱信件、電子報"
+            },
+            {
+              "category": "[13]-報告報表",
+              "description": "各類分析、月報、週報、業績、數據報表等"
+            },
+            {
+              "category": "[14]-內部信件",
+              "description": "公司同事、團隊成員內部溝通，非來自外部"
+            },
+            {
+              "category": "[15]-客戶聯絡",
+              "description": "客戶詢問、需求、進度、回覆、售後等"
+            },
+            {
+              "category": "[16]-簽核合約",
+              "description": "合約、審批、用印、申請單類文件"
+            },
+            {
+              "category": "[17]-重要通知",
+              "description": "系統、帳號、法規變更、緊急公告等"
+            },
+            {
+              "category": "[10]-未知",
+              "description": "無法歸類、來源不明的郵件，建議每日清查"
+            },
+            {
+              "category": "[18]-優惠券",
+              "description": "行銷活動、折扣碼、優惠訊息"
+            }
+          ]
+        },
+        "options": {
+          "systemPromptTemplate": "=Please classify the email text provided by the user into one of the following categories: {categories}, and use the provided formatting instructions below. Don't explain, and only output the json.\n\n# Requirement\n\n## [12]-Newsletter as true condtition\nemail content shoule like long and useful article\nwhen content contain below text\n- Newsletter or 電子報\n\n## default use [10]-未知 as true",
+          "enableAutoFixing": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.textClassifier",
+      "typeVersion": 1,
+      "position": [
+        960,
+        840
+      ],
+      "id": "fe6db02d-6dd0-412e-8432-e7a686b4f14d",
+      "name": "Catetory Text Classifier",
+      "executeOnce": false,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_33"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        380
+      ],
+      "id": "1977d059-e3b9-4a31-9d31-ab6dc875e3c8",
+      "name": "Gmail8",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_34"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        580
+      ],
+      "id": "43b61aa1-0f99-4428-ad21-e7a6c08e4f67",
+      "name": "Gmail9",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_35"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        980
+      ],
+      "id": "af8ed8f8-d5c5-4840-a62f-140cbe421238",
+      "name": "Gmail10",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_36"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        1180
+      ],
+      "id": "ca372693-6864-4664-b95d-d88ab90ab94a",
+      "name": "Gmail11",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_39"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        1880
+      ],
+      "id": "a12f00c5-389b-4c8b-9cad-8e9d2f6665cb",
+      "name": "Gmail12",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_6413078871440470453"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        2080
+      ],
+      "id": "41be21f4-dba8-4461-8369-589c976a08b7",
+      "name": "Gmail13",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_38"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        1380
+      ],
+      "id": "8ed7b29e-9fba-45db-a469-1fc79cf78146",
+      "name": "Gmail14",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $('Loop Over message').item.json.id }}",
+        "labelIds": [
+          "Label_37"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1540,
+        780
+      ],
+      "id": "925c5322-a19c-41ac-bc09-169195c4b325",
+      "name": "Gmail15",
+      "webhookId": "17543d88-1296-4c00-b7b2-88b883b61174",
+      "retryOnFail": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1760,
+        1080
+      ],
+      "id": "d3be1502-dc88-477e-b20f-a97e0b236c2a",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1800060943,
+          "mode": "list",
+          "cachedResultName": "log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit#gid=1800060943"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "log"
+          ],
+          "schema": [
+            {
+              "id": "log",
+              "displayName": "log",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        1540,
+        1680
+      ],
+      "id": "904fba0a-ce7d-4051-a393-a9b0bd3e3eab",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "83eca796-3d9e-459d-b867-218f07e300a3",
+              "name": "Content",
+              "value": "=Email subject: {{ $json.subject || $json.Subject}} \nEmail from: {{  \" \" || $json.from.value[0].name }} - {{ $json.From || $json.from.value[0].address }} \nEmail Content: {{ $json.text || $json.snippet }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        140,
+        1520
+      ],
+      "id": "a6812b8a-7694-4c3f-abd9-72ac4c1a93fe",
+      "name": "Email"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        400,
+        1700
+      ],
+      "id": "8a923b32-8f7b-4e6e-84d8-9fed95dd0e5d",
+      "name": "OpenAI 4.1-mini",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# zerobox release vertin\n\n## 1 - 設定分類標籤\n\n- 先複製副本 https://docs.google.com/spreadsheets/d/10Nyd2b8wX0vRy6M7X9Tyxa1KpLCuKZJTuJ647xDyQL4/edit?gid=1800060943#gid=1800060943\n- 確認狀態與類別標籤，符合需求\n- 連結手動觸發到設定分類標籤，幫你的 gmail 打上標籤\n- 先處理刪除標籤，大多是看過就可以，再根據時間安排其他狀態處理\n- 這邊處理完通常就剩下一半郵件！\n\n## 2 - 自動標籤 Auto Label - 狀態+情境\n\n- 每六小時或是有郵件進來時，自動貼標狀態或情境分類標籤\n- 固定時段進來清空狀態\n- 回到inbox確定所有狀態都完成\n\n## 3 - 重要郵件 - 總結報告：快速瀏覽今天重要郵件\n\n- 一開始上班先看，對重要郵件有個總結印象\n- 大腦處理起來有熱機的效果\n\n## 4 - Auto AI Reply by 911\n\n- 需要回覆的郵件，先貼911標籤，AI先寫回覆郵件草稿\n- 適合客戶回覆或是確認的郵件，減少手工",
+        "height": 740,
+        "width": 720,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2700,
+        100
+      ],
+      "id": "6f93f018-33f2-482b-bbc2-6fb8392c29ce",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -2080,
+        1180
+      ],
+      "id": "3c224e7f-3008-4f84-9529-602acb75aa10",
+      "name": "Loop Over Summary"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "你是一個擅長摘要電子郵件的智慧型機器人",
+              "role": "system"
+            },
+            {
+              "content": "=from: {{ $json.from.text }}\nsubject: {{ $json.subject }}\n\nEmail Body:\n{{ $json.text }}"
+            }
+          ]
+        },
+        "jsonOutput": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -1820,
+        1180
+      ],
+      "id": "fe088084-0ea1-4094-ac24-8ab26ee5d569",
+      "name": "Summary",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit?gid=0#gid=0",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1568636497,
+          "mode": "list",
+          "cachedResultName": "Summary",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1XXHOxMjJP8kFziEasFfdw3GIUuIBhqboK-hkNFUYwMI/edit#gid=1568636497"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ID": "={{ $('Loop Over Summary').item.json.id }}",
+            "Date": "={{ $now }}",
+            "Summary": "={{ $json.message.content.summary }}",
+            "Subject": "={{ $json.message.content.subject }}",
+            "Snippet": "={{ $('Loop Over Summary').item.json.threadId }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Date",
+              "displayName": "Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Subject",
+              "displayName": "Subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Summary",
+              "displayName": "Summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Snippet",
+              "displayName": "Snippet",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1400,
+        1180
+      ],
+      "id": "433f0f8a-5fcf-40f4-a9a5-ebb6aa827a69",
+      "name": "Google Sheets3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "h9nt1tzSKXo5I5yr",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "# 重要郵件總結報告\n",
+        "height": 500,
+        "width": 1840
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2680,
+        1060
+      ],
+      "id": "bf4b62ad-f396-43f3-803e-c958c5069187",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -540,
+        2360
+      ],
+      "id": "79191840-7f3f-44f1-b89b-b2e9e832ee55",
+      "name": "Per 6 Hour"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7,
+              "triggerAtMinute": 5
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2560,
+        1180
+      ],
+      "id": "96cfd12a-e9cf-4b36-8ac8-c8b276978ac1",
+      "name": "7 AM in Day"
+    },
+    {
+      "parameters": {
+        "content": "# 自動標籤 Auto Label - 狀態+情境\n",
+        "height": 2420,
+        "width": 3060
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        100
+      ],
+      "id": "48292b99-35c7-4365-9ab4-080a7963b198",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "simple": false,
+        "filters": {
+          "labelIds": [
+            "Label_28",
+            "Label_39",
+            "Label_37"
+          ],
+          "receivedAfter": "={{ new Date(new Date($now).setDate(new Date($now).getDate() - 1)).toISOString() }}\n"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -2320,
+        1180
+      ],
+      "id": "949de478-4490-4c59-b1d8-52ef1ea50b54",
+      "name": "Gmail-Summary-Before-1-Day",
+      "webhookId": "d60a5d65-4599-4c2a-8109-dea757e50576",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -1860,
+        1900
+      ],
+      "id": "d22f33fb-597c-47b6-85e3-6cb9545258a1",
+      "name": "OpenAI 4.1",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n    \"subject_line\": \"subject_line\",\n\t\"message\": \"California\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -1500,
+        1900
+      ],
+      "id": "d1b582dd-d432-40a3-b394-e8dcab6f7b34",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Email subject: {{ $json.subject || $json.Subject}} \nEmail from: {{  $json.from.value[0].name || \" \" }} - {{ $json.From || $json.from.value[0].address }} \nEmail Content: {{ $json.text || $json.snippet }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "You are a smart email reply assistant.\n\n# Output \n- 繁體中文\n\n# Formet\nHi { Sender },\n\nContent\n\nRegard,\nAlex\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -1780,
+        1680
+      ],
+      "id": "26cebab5-1447-4dbe-8b7b-37681630d150",
+      "name": "Email Reply Agent"
+    },
+    {
+      "parameters": {
+        "resource": "draft",
+        "subject": "={{ $json.output.subject_line }}",
+        "message": "={{ $json.output.message }}",
+        "options": {
+          "threadId": "={{ $('Loop Over Reply').item.json.threadId }}",
+          "sendTo": "={{ $('Loop Over Reply').item.json.From || $('Loop Over Reply').item.json.from.value[0].address }} "
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -1260,
+        1920
+      ],
+      "id": "afb643a6-8a5d-44fc-9858-35059468b223",
+      "name": "Reply Draft",
+      "webhookId": "93f0b163-22b6-4c04-8fee-9a2f412cbc67",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Auto AI Reply by 911",
+        "height": 720,
+        "width": 1840
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2680,
+        1620
+      ],
+      "id": "0e2ae665-03f9-4965-93e2-b9ee14d7ecb1",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "simple": false,
+        "filters": {
+          "labelIds": [
+            "Label_4643660905315621364"
+          ],
+          "receivedAfter": "={{ new Date(new Date($now).setDate(new Date($now).getDate() - 1)).toISOString() }}\n"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -2320,
+        1680
+      ],
+      "id": "17c79bac-703d-48ca-ad98-742a33653e7c",
+      "name": "Gmail-Reply",
+      "webhookId": "d60a5d65-4599-4c2a-8109-dea757e50576",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 15,
+              "unit": "minutes"
+            }
+          ]
+        },
+        "filters": {
+          "labelIds": [
+            "Label_4643660905315621364"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2580,
+        2120
+      ],
+      "id": "4d0d84a2-89ff-47bc-83a4-97474dcf2b0f",
+      "name": "Repley-Trigger",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -2100,
+        1680
+      ],
+      "id": "5eeba308-e746-46aa-b0c7-ce6f980577b2",
+      "name": "Loop Over Reply"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7,
+              "triggerAtMinute": 15
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -2580,
+        1920
+      ],
+      "id": "ee0b0eb4-244c-42b1-913a-71c11fb3801b",
+      "name": "07:15 in Day"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Gmail Trigger": {
+      "main": [
+        [
+          {
+            "node": "Loop Over message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Gmail-Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Gmail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over message": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI 4.1-nano": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "Gmail3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail3": {
+      "main": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail4": {
+      "main": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail5": {
+      "main": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail6": {
+      "main": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail7": {
+      "main": [
+        [
+          {
+            "node": "Catetory Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Catetory Text Classifier": {
+      "main": [
+        [
+          {
+            "node": "Gmail8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail15",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail14",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail13",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail13": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail12": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail14": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail10": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail11": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail15": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail9": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail8": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Loop Over message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email": {
+      "main": [
+        [
+          {
+            "node": "Status Text Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI 4.1-mini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Status Text Classifier",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Summary": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summary": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Per 6 Hour": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "7 AM in Day": {
+      "main": [
+        [
+          {
+            "node": "Gmail-Summary-Before-1-Day",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail-Summary-Before-1-Day": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI 4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Email Reply Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Email Reply Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Reply Agent": {
+      "main": [
+        [
+          {
+            "node": "Reply Draft",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reply Draft": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail-Reply": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Repley-Trigger": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Reply": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Email Reply Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "07:15 in Day": {
+      "main": [
+        [
+          {
+            "node": "Gmail-Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Taipei",
+    "callerPolicy": "workflowsFromSameOwner",
+    "timeSavedPerExecution": 15
+  },
+  "versionId": "ce1a9bb2-8525-4b9d-88ad-f63f74bbbc77",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98fc6998a4fc974191a50fd1e28f3c93149311bffb0a029723a4889a4111c908"
+  },
+  "id": "WymMHXO5Al9zbgCG",
+  "tags": [
+    {
+      "createdAt": "2025-02-08T08:50:12.969Z",
+      "updatedAt": "2025-02-08T08:50:12.969Z",
+      "id": "MsjujtEapjDx89km",
+      "name": "YT"
+    }
+  ]
+}
