@@ -1,13 +1,15 @@
-# 使用半年 NotebookLM ， 5 個幫助我生產力加倍的功能｜AI 高效生產力
+# 訂閱兩年 ChatGPT，6 個幫助我生產力 3x 的功能情境
 
-![NotebookLM 專案封面](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/31-5-tips-notebooklm/cover.png?raw=true)
+![ChatGPT 生產力提升](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/32-7-tips-chatgpt/cover.png?raw=true)
 
-【五大功能重點】
-* 1️⃣ 探索來源：一鍵找參考資料
-* 2️⃣ 心智圖：好理解的知識體系
-* 3️⃣ 探索對話：重點轉化 Podcast
-* 4️⃣ YouTube 影片+音訊匯入：筆記種類再進化
-* 5️⃣ 輸出語言：講國語也會通
+【 6 大功能重點】
+。
+* 1️⃣ MyGPT：圖片文字轉中文
+* 2️⃣ 深度研究：你的 AI 老師
+* 3️⃣ 語音翻譯：用講的比較快
+* 4️⃣ 分享連結：一鍵分享知識
+* 5️⃣ 專案管理：筆記集散地
+* 6️⃣ 語音模式：用文字很難解釋
 
 ---
 
