@@ -25,9 +25,10 @@
 
 ## 🎥 你可以從影片中獲得
 
-* **五步驟完整流程與 Demo**：從 MCP 安裝、API 金鑰設定、Workflow 建立，到 Cloud Desktop 整合，帶你逐步體驗 n8n 五步自動化。
-* **基礎與進階應用對照**：從簡易 webhook 任務到「AI 爸媽碎碎念」進階 workflow，示範系統如何協助排除安裝 bug，還能根據需求及時調整。
-* **Claude Desktop 專案模式使用**：如何利用 claude 專案模式，建立 n8n 互動與工作環境！
+* **五步驟完整流程與 Demo**：從 n8n-MCP 安裝、API 金鑰設定、Workflow 建立，到 Cloud Desktop 整合，一次搞定 vibe n8n 自動化。
+* **基礎與進階應用對照**：從簡易 webhook 任務到「AI 爸媽碎碎念」進階 workflow，示範系統如何協助排除安裝 bug，根據需求及時調整。
+* **Claude 專案模式使用**：如何利用 claude 專案模式，建立 n8n 互動與工作環境！
+* **n8n MCP 實測注意事項**：各種安裝雷區（Node22.17 版）、Cloud Desktop 重新啟動必備流程，減少新手踩坑機率。
 
 ---
 
