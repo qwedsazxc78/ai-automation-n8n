@@ -3,8 +3,11 @@
 ## 📂 連結快速入口
 
 * 💡 GitHub 專案頁面：[ai-automation-n8n](https://github.com/qwedsazxc78/ai-automation-n8n)
-* 📺 YouTube 教學頻道：[Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q) - 別忘了訂閱頻道！** [🔔 點我訂閱 YouTube 頻道](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
-* 👥 Skool 社群學習中心：[Skool | AI Brain 社群](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)，和其他學習者一起交流、提問與精進技能！[![Skool](https://img.shields.io/badge/Join%20Skool-%234144B3?style=flat-square&logoColor=white)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
+* 📺 YouTube 教學頻道：[Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q) - 別忘了訂閱頻道！ [🔔 點我訂閱 YouTube 頻道](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
+* 🔗 [加入 AI 學習社群 (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
+  ：建立學習 AI 與 n8n 的學習路徑，無痛上手！
+* 🔗 [加入 Line 社群一起搞懂 AI](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg)
+  ：互相幫助前進！打造自己的 AI 自動化場景！
 
 ## 一鍵部署雲端 n8n in Zeabur
 
