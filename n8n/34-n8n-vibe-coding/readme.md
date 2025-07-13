@@ -2,7 +2,7 @@
 
 ![n8n 也能 vibe coding？3 個使用 n8n-mcp + Claude Desktop 心得](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/34-n8n-vibe-coding/cover.png?raw=true)
 
-## 【 3大重點快速看】
+## 【 3大重點快速看 】
 
 * 現階段測試：簡單任務可以加減使用
 * 複雜任務使用：等待時間比較久，會有上下文不夠問題
