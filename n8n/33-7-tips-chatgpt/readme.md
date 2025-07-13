@@ -3,7 +3,7 @@
 ![ChatGPT 生產力提升](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/32-7-tips-chatgpt/cover.png?raw=true)
 
 【 6 大功能重點】
-。
+
 * 1️⃣ MyGPT：圖片文字轉中文
 * 2️⃣ 深度研究：你的 AI 老師
 * 3️⃣ 語音翻譯：用講的比較快
