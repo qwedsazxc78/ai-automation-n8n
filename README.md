@@ -120,6 +120,12 @@
 32.  [4 個 n8n 提升 mail 生產力的技巧，立馬節省我 50% 處理郵件時間](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/ZFPW8Onnnf0)
 
+33.  [訂閱兩年 ChatGPT，6 個幫助我生產力 3x 的功能情境](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/33-7-tips-chatgpt)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/FSXQ1tdfhAo)
+
+34.  [n8n 也能 vibe coding？3 個使用 n8n-mcp + Claude Desktop 心得](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/34-n8n-vibe-coding)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/VmyyO6nh7Cc)
+
 ## 📺 [YouTube 教學頻道 Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
 
 ![Alex Hsieh 相談室 | AI Brain](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/docs/YT.png?raw=true)
