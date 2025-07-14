@@ -1,6 +1,19 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # EP16 n8n think tool 升級 AI Agent！GPT4.1 + 思考指揮官，解決複雜任務更容易！Anthropic’s Think Method｜🧠 省力知識庫[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/E_cqlz7VGgs)
 
 ![影片封面](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/16-n8n-ai-agent-with-think-tool/cover.png?raw=true)
+
+## 📋 必要條件 Prerequisites
+
+- n8n v1.0+ 已安裝並運行
+- API Keys 需求:
+  - ✅ OpenAI API Key (GPT-4.1) (必需)
+- 其他工具:
+  - Think Tool 節點支援
+  - MCP Server 連接 (測試用服務):
+    - CRM MCP: https://n8n-alex.zeabur.app/mcp/crm/sse
+    - Store Order MCP: https://n8n-alex.zeabur.app/mcp/store/sse
+  - ⚡ Calendar & Email MCP (選用，需 token 權限)
 
 ## 作者資訊
 

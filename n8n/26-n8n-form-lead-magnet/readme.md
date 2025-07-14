@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 8 分鐘學會最簡單的 n8n 表單應用，打造自動化名單磁鐵
 
 ![n8n 自動化名單磁鐵教學](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/26-n8n-form-lead-magnet/cover.png?raw=true)

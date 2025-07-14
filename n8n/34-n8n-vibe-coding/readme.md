@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # n8n 也能 vibe coding？3 個使用 n8n-mcp + Claude Desktop 心得
 
 ![n8n 也能 vibe coding？3 個使用 n8n-mcp + Claude Desktop 心得](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/34-n8n-vibe-coding/cover.png?raw=true)

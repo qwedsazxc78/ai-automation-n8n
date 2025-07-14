@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 10分鐘學會 16 個 n8n 技巧，加速 5x 開發時間｜26 個 n8n 技巧系列 Part 1｜🧠 省力知識庫[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mPSkokKL6pY)
 
 ![10分鐘學會 16 個 n8n 技巧，加速 5x 開發時間｜26 個 n8n 技巧系列 Part 1｜🧠 省力知識庫](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/23-n8n-26-tips-1-16/cover.png?raw=true)

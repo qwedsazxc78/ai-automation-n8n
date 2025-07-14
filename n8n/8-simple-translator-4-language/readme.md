@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 🔥 省力工具！超級翻譯機，中英日韓翻譯一次搞定！[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/PgT0_F56Eb4)
 
 ![🔥 省力工具！超級翻譯機](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/8-simple-translator-4-language/cover.png?raw=true)

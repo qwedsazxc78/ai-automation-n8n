@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 免費部署 n8n 到 AWS！Lightsail + Cloudflare 快速搞定｜Lightsail 3 個月 0 元購，新手也能輕鬆上手[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/VsYy-1CHtns)
 
 ![cover](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/28-deploy-n8n-in-aws/cover.png?raw=true)

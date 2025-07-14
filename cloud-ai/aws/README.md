@@ -1,5 +1,7 @@
 # n8n Docker Compose 設置 in AWS
 
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁体中文](./README.md)
+
 用於運行 n8n 工作流自動化工具
 此配置為在 aws 運行 n8n 容器所需的基礎設置，並搭配 PostgreSQL 資料庫。
 

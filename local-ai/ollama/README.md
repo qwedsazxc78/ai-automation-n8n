@@ -1,5 +1,7 @@
 # Ollama 本地部署
 
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁体中文](./README.md)
+
 本資料夾包含在本地運行 Ollama 的相關配置和指令。Ollama 是一個用於在本地運行大型語言模型的工具。
 
 ## 快速開始

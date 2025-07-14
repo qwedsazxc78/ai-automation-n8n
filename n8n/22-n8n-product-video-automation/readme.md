@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 如何用 n8n 達成產品影片自動化，n8n step by step 教學｜ChatGPT-Image-1 + runway｜🔥 省力工具[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/Aixy9qH9K98)
 
 為零基礎或自動化愛好者設計，n8n 結合 AI 圖片生成 GPT-Image-1  與影片產生工具 Runway

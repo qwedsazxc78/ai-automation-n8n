@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 🔥 行銷省力工具！公司名單抓取神器，用 n8n 幫忙整理潛在客戶名單｜免費模板下載[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/PsGwfkYdfpk)
 
 ![行銷省力工具封面圖](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/3-auto-marketing-list-automation/cover.png?raw=true)

@@ -13,10 +13,10 @@ This is an n8n workflow automation educational repository featuring 34+ AI-power
 When asked to create or enhance documentation with minimal changes:
 
 **Primary Goals:**
-- Preserve existing structure and content
-- Add only essential missing information
-- Maintain consistency with existing documentation style
-- Focus on user readability and quick comprehension
+* Preserve existing structure and content
+* Add only essential missing information
+* Maintain consistency with existing documentation style
+* Focus on user readability and quick comprehension
 
 **Document Enhancement Checklist:**
 1. **Quick Start Section**: Ensure users can get started within 2 minutes
@@ -26,10 +26,10 @@ When asked to create or enhance documentation with minimal changes:
 5. **Visual Aids**: Suggest where diagrams/screenshots would help
 
 **Minimal Change Principles:**
-- Add clarifying examples rather than rewriting sections
-- Insert helpful tips in existing sections
-- Use inline comments for technical clarifications
-- Preserve original author's voice and terminology
+* Add clarifying examples rather than rewriting sections
+* Insert helpful tips in existing sections
+* Use inline comments for technical clarifications
+* Preserve original author's voice and terminology
 
 ### 2. Reader Agent for Document Quality Check
 
@@ -57,6 +57,7 @@ When validating documentation readiness, simulate a new user perspective:
    - Do examples progress from simple to complex?
 
 **Reader Agent Output Format:**
+
 ```
 Document Readiness Score: [1-10]
 - Clarity: [score] - [brief explanation]
@@ -72,6 +73,7 @@ Top 3 Improvements Needed:
 ## Key Commands
 
 ### Local Development
+
 ```bash
 # Start basic local n8n instance with PostgreSQL
 cd local-ai/basic
@@ -86,6 +88,7 @@ docker-compose down
 ```
 
 ### Cloud Deployment
+
 ```bash
 # AWS deployment
 cd cloud-ai/aws
@@ -97,6 +100,7 @@ cd cloud-ai/zeabur
 ```
 
 ### Utility Scripts
+
 ```bash
 # Aggregate all workflow content for analysis
 cd n8n/scripts
@@ -106,30 +110,33 @@ cd n8n/scripts
 ## Architecture & Structure
 
 ### Directory Organization
-- **`/n8n/`**: Contains 34 workflow examples, each in its own directory (e.g., `1-simple-invoice-automation/`)
-  - Each workflow directory includes:
+
+* **`/n8n/`**: Contains 34 workflow examples, each in its own directory (e.g.,   `1-simple-invoice-automation/`)
+  + Each workflow directory includes:
     - `automation.json`: n8n workflow definition
     - `readme.md`: Workflow description and instructions
     - `cover.png`: Visual representation
-- **`/local-ai/`**: Local deployment configurations
-  - `basic/`: Simple local setup
-  - `public/`: Local setup with ngrok for external access
-- **`/cloud-ai/`**: Cloud deployment configurations
-  - `aws/`: AWS deployment with nginx SSL termination
-  - `zeabur/`: Zeabur platform deployment
-- **`/docs/`**: Documentation images and assets
+* **`/local-ai/`**: Local deployment configurations
+  + `basic/`: Simple local setup
+  + `public/`: Local setup with ngrok for external access
+* **`/cloud-ai/`**: Cloud deployment configurations
+  + `aws/`: AWS deployment with nginx SSL termination
+  + `zeabur/`: Zeabur platform deployment
+* **`/docs/`**: Documentation images and assets
 
 ### Deployment Architecture
-- **Local**: Docker Compose with n8n + PostgreSQL
-- **AWS**: n8n + PostgreSQL + nginx reverse proxy with SSL
-- **Public Access**: ngrok integration for exposing local instances
+
+* **Local**: Docker Compose with n8n + PostgreSQL
+* **AWS**: n8n + PostgreSQL + nginx reverse proxy with SSL
+* **Public Access**: ngrok integration for exposing local instances
 
 ### Key Integration Points
-- **AI Services**: OpenAI, Claude, Google Gemini, xAI Grok
-- **Communication**: LINE Message API, email services
-- **Voice AI**: Retell integration
-- **Video Generation**: Google Veo3
-- **MCP (Model Context Protocol)**: Multiple examples demonstrating MCP server integration
+
+* **AI Services**: OpenAI, Claude, Google Gemini, xAI Grok
+* **Communication**: LINE Message API, email services
+* **Voice AI**: Retell integration
+* **Video Generation**: Google Veo3
+* **MCP (Model Context Protocol)**: Multiple examples demonstrating MCP server integration
 
 ## Working with Workflows
 
@@ -142,29 +149,31 @@ When creating or modifying n8n workflows:
 ## Environment Configuration
 
 Each deployment directory contains `.env.example` files with required variables:
-- Database credentials (POSTGRES_USER, POSTGRES_PASSWORD)
-- n8n authentication (N8N_BASIC_AUTH_USER, N8N_BASIC_AUTH_PASSWORD)
-- Service URLs and ports
-- SSL certificate paths (for AWS deployment)
+* Database credentials (POSTGRES_USER, POSTGRES_PASSWORD)
+* n8n authentication (N8N_BASIC_AUTH_USER, N8N_BASIC_AUTH_PASSWORD)
+* Service URLs and ports
+* SSL certificate paths (for AWS deployment)
 
 ## Important Notes
 
-- This is an educational repository - workflows demonstrate concepts rather than production-ready solutions
-- No formal testing framework exists - test workflows manually in n8n interface
-- Primary documentation language is Traditional Chinese
-- Community resources available at: https://www.skool.com/ai-automation-n8n-hk
+* This is an educational repository - workflows demonstrate concepts rather than production-ready solutions
+* No formal testing framework exists - test workflows manually in n8n interface
+* Primary documentation language is Traditional Chinese
+* Community resources available at: https://www.skool.com/ai-automation-n8n-hk
 
 ## Practical Examples for Document Agents
 
 ### Example: Enhancing a Workflow README (Document Generator)
 
 **Current State:**
+
 ```markdown
 # Invoice Automation
 This workflow processes invoices automatically.
 ```
 
 **Enhanced with Minimal Changes:**
+
 ```markdown
 # Invoice Automation
 This workflow processes invoices automatically.
@@ -179,6 +188,7 @@ This workflow processes invoices automatically.
 ### Example: Reader Agent Assessment
 
 **For the main README.md:**
+
 ```
 Document Readiness Score: 8/10
 - Clarity: 9/10 - Clear project purpose and well-organized workflow list
