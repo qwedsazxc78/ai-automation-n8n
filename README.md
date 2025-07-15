@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **English**: An educational repository featuring 34+ AI-powered n8n workflow automation examples, from invoice processing to AI agent integrations. Perfect for learning workflow automation with n8n.
+> 🌍 **繁體中文**: 包含30+個AI驅動的n8n工作流程自動化範例的 n8n 專案，從發票處理到AI代理整合！適合學習n8n工作流程自動化的你。
 
 ## 📂 連結快速入口
 
@@ -17,10 +17,10 @@
 
 ### 選項 1: 雲端一鍵部署（推薦新手）
 
-1. 點擊下方 Zeabur 部署按鈕
-2. 註冊並使用推薦碼獲得額度
-3. 等待部署完成（約2分鐘）
-4. 開始使用 n8n！
+01. 點擊下方 Zeabur 部署按鈕
+02. 註冊並使用推薦碼獲得額度
+03. 等待部署完成（約2分鐘）
+04. 開始使用 n8n！
 
 ### 選項 2: 本地快速部署
 
@@ -58,43 +58,49 @@ docker-compose up -d
 ## 📂 工作流程分類 Workflow Categories
 
 ### 🤖 AI Agent 範例
-- [#5 xAI Grok AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/5-xAI-ai-agent)
-- [#9 AI Agent with MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/9-ai-agent-with-mcp)
-- [#16 AI Agent with Think Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/16-n8n-ai-agent-with-think-tool)
-- [#19 圖片生成 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/19-image-generate-ai-agent)
-- [#21 購物搜尋 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/21-n8n-shopping-search-agent)
-- [#27 語音 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/27-voice-ai-agent-with-retell)
+
+* [#5 xAI Grok AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/5-xAI-ai-agent)
+* [#9 AI Agent with MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/9-ai-agent-with-mcp)
+* [#16 AI Agent with Think Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/16-n8n-ai-agent-with-think-tool)
+* [#19 圖片生成 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/19-image-generate-ai-agent)
+* [#21 購物搜尋 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/21-n8n-shopping-search-agent)
+* [#27 語音 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/27-voice-ai-agent-with-retell)
 
 ### 📄 文件處理自動化
-- [#1 發票自動整理](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/1-simple-invoice-automation)
-- [#2 字幕檔自動轉換](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/2-auto-translate-subtitle-automation)
-- [#7 超級翻譯機](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/7-super-translator-100-batch)
-- [#8 多語言翻譯](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/8-simple-translator-4-language)
-- [#30 自動化證書製作](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/30-n8n-auto-certificate)
+
+* [#1 發票自動整理](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/1-simple-invoice-automation)
+* [#2 字幕檔自動轉換](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/2-auto-translate-subtitle-automation)
+* [#7 超級翻譯機](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/7-super-translator-100-batch)
+* [#8 多語言翻譯](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/8-simple-translator-4-language)
+* [#30 自動化證書製作](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/30-n8n-auto-certificate)
 
 ### 🔗 整合與部署
-- [#13 Zeabur 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/13-deploy-zubear)
-- [#15 本地部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/15-deploy-n8n-in-local)
-- [#28 AWS 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/28-deploy-n8n-in-aws)
-- [#12 MCP 安裝設定](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/12-mcp-community-node)
-- [#14 n8n 官方 MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/14-n8n-native-mcp)
+
+* [#13 Zeabur 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/13-deploy-zubear)
+* [#15 本地部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/15-deploy-n8n-in-local)
+* [#28 AWS 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/28-deploy-n8n-in-aws)
+* [#12 MCP 安裝設定](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/12-mcp-community-node)
+* [#14 n8n 官方 MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/14-n8n-native-mcp)
 
 ### 📱 通訊與行銷
-- [#17 LINE Message API](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/17-n8n-line-message-api)
-- [#3 行銷名單抓取](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/3-auto-marketing-list-automation)
-- [#26 表單應用](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/26-n8n-form-lead-magnet)
-- [#32 郵件生產力](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
+
+* [#17 LINE Message API](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/17-n8n-line-message-api)
+* [#3 行銷名單抓取](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/3-auto-marketing-list-automation)
+* [#26 表單應用](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/26-n8n-form-lead-magnet)
+* [#32 郵件生產力](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
 
 ### 🛠️ 系統與工具
-- [#4 SSL 憑證管理](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/4-SSL-checker-automation)
-- [#18 錯誤處理工作流](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/18-n8n-error-workflow)
-- [#20 HTTP 請求與 Webhook](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/20-n8n-http-request-and-webhook)
-- [#23 26個 n8n 技巧 Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
-- [#24 26個 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
+
+* [#4 SSL 憑證管理](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/4-SSL-checker-automation)
+* [#18 錯誤處理工作流](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/18-n8n-error-workflow)
+* [#20 HTTP 請求與 Webhook](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/20-n8n-http-request-and-webhook)
+* [#23 26個 n8n 技巧 Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
+* [#24 26個 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
 
 ### 🎥 影片生成
-- [#22 產品影片自動化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/22-n8n-product-video-automation)
-- [#29 Google Veo3 影片生成](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
+
+* [#22 產品影片自動化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/22-n8n-product-video-automation)
+* [#29 Google Veo3 影片生成](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
 
 ---
 
@@ -204,24 +210,28 @@ docker-compose up -d
 ## ❗ 常見問題排解 Troubleshooting
 
 ### n8n 無法啟動
-- 檢查 Docker 是否正在運行: `docker ps`
-- 檢查端口衝突: `lsof -i :5678`
-- 查看錯誤日誌: `docker-compose logs n8n`
+
+* 檢查 Docker 是否正在運行: `docker ps`
+* 檢查端口衝突: `lsof -i :5678`
+* 查看錯誤日誌: `docker-compose logs n8n`
 
 ### Webhook 無法接收請求
-- 確認 WEBHOOK_URL 環境變數設定正確
-- 使用 ngrok 進行本地測試
-- 檢查防火牆設定
+
+* 確認 WEBHOOK_URL 環境變數設定正確
+* 使用 ngrok 進行本地測試
+* 檢查防火牆設定
 
 ### API 認證失敗
-- 確認 API Key 有效且有額度
-- 檢查環境變數是否正確載入
-- 驗證 API endpoint 是否正確
+
+* 確認 API Key 有效且有額度
+* 檢查環境變數是否正確載入
+* 驗證 API endpoint 是否正確
 
 ### 工作流程執行錯誤
-- 查看 n8n 執行日誌
-- 使用 Error Workflow（參考 workflow #18）
-- 檢查節點配置是否正確
+
+* 查看 n8n 執行日誌
+* 使用 Error Workflow（參考 workflow #18）
+* 檢查節點配置是否正確
 
 ## 📺 [YouTube 教學頻道 Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
 

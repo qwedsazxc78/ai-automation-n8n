@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁体中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **简体中文**: 一个包含34+个AI驱动的n8n工作流自动化示例的教育仓库，从发票处理到AI代理集成。非常适合学习n8n工作流自动化。
+> 🌍 **简体中文**: 包含30+个AI驱动的n8n工作流程自动化范例的 n8n 项目，从发票处理到AI代理集成！适合学习n8n工作流程自动化的你。
 
 ## 📂 快速链接
 

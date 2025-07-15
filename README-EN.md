@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **English**: An educational repository featuring 34+ AI-powered n8n workflow automation examples, from invoice processing to AI agent integrations. Perfect for learning workflow automation with n8n.
+> 🌍 **English**: An n8n project featuring 30+ AI-powered workflow automation examples, from invoice processing to AI agent integrations! Perfect for learning n8n workflow automation.
 
 ## 📂 Quick Links
 
