@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁體中文](./readme.md)
+
 # n8n + ollama 本機 LLM 模型零基礎學習全家餐｜實測 Gemma3、DeepSeek-R1、Mistral 三種模型
 
 ![n8n + ollama 本機 LLM 模型零基礎學習全家餐｜實測 Gemma3、DeepSeek-R1、Mistral 三種模型](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/35-n8n-with-ollama/cover.png?raw=true)

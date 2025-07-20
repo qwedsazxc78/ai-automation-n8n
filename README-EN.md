@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **English**: An n8n project featuring 30+ AI-powered workflow automation examples, from invoice processing to AI agent integrations! Perfect for learning n8n workflow automation.
+> 🌍 **English**: An n8n project featuring 35+ AI-powered workflow automation examples, from invoice processing to AI agent integrations! Perfect for learning n8n workflow automation.
 
 ## 📂 Quick Links
 
@@ -17,10 +17,10 @@
 
 ### Option 1: One-click Cloud Deployment (Recommended for beginners)
 
-1. Click the Zeabur deployment button below
-2. Sign up and use referral code to get credits
-3. Wait for deployment to complete (about 2 minutes)
-4. Start using n8n!
+01. Click the Zeabur deployment button below
+02. Sign up and use referral code to get credits
+03. Wait for deployment to complete (about 2 minutes)
+04. Start using n8n!
 
 ### Option 2: Local Quick Deployment
 
@@ -58,43 +58,50 @@ docker-compose up -d
 ## 📂 Workflow Categories
 
 ### 🤖 AI Agent Examples
-- [#5 xAI Grok AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/5-xAI-ai-agent)
-- [#9 AI Agent with MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/9-ai-agent-with-mcp)
-- [#16 AI Agent with Think Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/16-n8n-ai-agent-with-think-tool)
-- [#19 Image Generation AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/19-image-generate-ai-agent)
-- [#21 Shopping Search AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/21-n8n-shopping-search-agent)
-- [#27 Voice AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/27-voice-ai-agent-with-retell)
+
+* [#5 xAI Grok AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/5-xAI-ai-agent)
+* [#9 AI Agent with MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/9-ai-agent-with-mcp)
+* [#16 AI Agent with Think Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/16-n8n-ai-agent-with-think-tool)
+* [#19 Image Generation AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/19-image-generate-ai-agent)
+* [#21 Shopping Search AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/21-n8n-shopping-search-agent)
+* [#27 Voice AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/27-voice-ai-agent-with-retell)
 
 ### 📄 Document Processing Automation
-- [#1 Invoice Processing Automation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/1-simple-invoice-automation)
-- [#2 Subtitle File Auto-conversion](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/2-auto-translate-subtitle-automation)
-- [#7 Super Translator](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/7-super-translator-100-batch)
-- [#8 Multi-language Translation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/8-simple-translator-4-language)
-- [#30 Automated Certificate Generation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/30-n8n-auto-certificate)
+
+* [#1 Invoice Processing Automation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/1-simple-invoice-automation)
+* [#2 Subtitle File Auto-conversion](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/2-auto-translate-subtitle-automation)
+* [#7 Super Translator](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/7-super-translator-100-batch)
+* [#8 Multi-language Translation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/8-simple-translator-4-language)
+* [#30 Automated Certificate Generation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/30-n8n-auto-certificate)
 
 ### 🔗 Integration & Deployment
-- [#13 Zeabur Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/13-deploy-zubear)
-- [#15 Local Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/15-deploy-n8n-in-local)
-- [#28 AWS Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/28-deploy-n8n-in-aws)
-- [#12 MCP Installation & Setup](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/12-mcp-community-node)
-- [#14 n8n Official MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/14-n8n-native-mcp)
+
+* [#13 Zeabur Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/13-deploy-zubear)
+* [#15 Local Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/15-deploy-n8n-in-local)
+* [#28 AWS Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/28-deploy-n8n-in-aws)
+* [#12 MCP Installation & Setup](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/12-mcp-community-node)
+* [#14 n8n Official MCP](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/14-n8n-native-mcp)
 
 ### 📱 Communication & Marketing
-- [#17 LINE Message API](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/17-n8n-line-message-api)
-- [#3 Marketing List Extraction](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/3-auto-marketing-list-automation)
-- [#26 Form Applications](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/26-n8n-form-lead-magnet)
-- [#32 Email Productivity](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
+
+* [#17 LINE Message API](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/17-n8n-line-message-api)
+* [#3 Marketing List Extraction](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/3-auto-marketing-list-automation)
+* [#26 Form Applications](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/26-n8n-form-lead-magnet)
+* [#32 Email Productivity](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/32-n8n-enhance-email-productivity)
 
 ### 🛠️ System & Tools
-- [#4 SSL Certificate Management](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/4-SSL-checker-automation)
-- [#18 Error Handling Workflow](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/18-n8n-error-workflow)
-- [#20 HTTP Request & Webhook](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/20-n8n-http-request-and-webhook)
-- [#23 26 n8n Tips Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
-- [#24 26 n8n Tips Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
+
+* [#4 SSL Certificate Management](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/4-SSL-checker-automation)
+* [#18 Error Handling Workflow](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/18-n8n-error-workflow)
+* [#20 HTTP Request & Webhook](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/20-n8n-http-request-and-webhook)
+* [#23 26 n8n Tips Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
+* [#24 26 n8n Tips Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
+* [#35 Ollama Local LLM Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
 
 ### 🎥 Video Generation
-- [#22 Product Video Automation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/22-n8n-product-video-automation)
-- [#29 Google Veo3 Video Generation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
+
+* [#22 Product Video Automation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/22-n8n-product-video-automation)
+* [#29 Google Veo3 Video Generation](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
 
 ---
 
@@ -201,27 +208,34 @@ docker-compose up -d
 34. [Can n8n Do Vibe Coding? 3 Insights from Using n8n-mcp + Claude Desktop](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/34-n8n-vibe-coding)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/VmyyO6nh7Cc)
 
+35. [n8n + Ollama Local LLM Zero-to-Hero Tutorial | Testing Gemma3, DeepSeek-R1, Mistral Models](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/SqLrKOArCck)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start
-- Check if Docker is running: `docker ps`
-- Check for port conflicts: `lsof -i :5678`
-- View error logs: `docker-compose logs n8n`
+
+* Check if Docker is running: `docker ps`
+* Check for port conflicts: `lsof -i :5678`
+* View error logs: `docker-compose logs n8n`
 
 ### Webhook Not Receiving Requests
-- Confirm WEBHOOK_URL environment variable is set correctly
-- Use ngrok for local testing
-- Check firewall settings
+
+* Confirm WEBHOOK_URL environment variable is set correctly
+* Use ngrok for local testing
+* Check firewall settings
 
 ### API Authentication Failed
-- Confirm API Key is valid and has credits
-- Check if environment variables are loaded correctly
-- Verify API endpoint is correct
+
+* Confirm API Key is valid and has credits
+* Check if environment variables are loaded correctly
+* Verify API endpoint is correct
 
 ### Workflow Execution Errors
-- Check n8n execution logs
-- Use Error Workflow (reference workflow #18)
-- Verify node configuration is correct
+
+* Check n8n execution logs
+* Use Error Workflow (reference workflow #18)
+* Verify node configuration is correct
 
 ## 📺 [YouTube Channel Alex Hsieh 相談室 | AI Brain](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q?sub_confirmation=1)
 

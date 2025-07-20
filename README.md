@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **繁體中文**: 包含30+個AI驅動的n8n工作流程自動化範例的 n8n 專案，從發票處理到AI代理整合！適合學習n8n工作流程自動化的你。
+> 🌍 **繁體中文**: 包含35+個AI驅動的n8n工作流程自動化範例的 n8n 專案，從發票處理到AI代理整合！適合學習n8n工作流程自動化的你。
 
 ## 📂 連結快速入口
 
@@ -96,6 +96,7 @@ docker-compose up -d
 * [#20 HTTP 請求與 Webhook](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/20-n8n-http-request-and-webhook)
 * [#23 26個 n8n 技巧 Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
 * [#24 26個 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
+* [#35 Ollama 本機 LLM 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
 
 ### 🎥 影片生成
 
@@ -206,6 +207,9 @@ docker-compose up -d
 
 34.  [n8n 也能 vibe coding？3 個使用 n8n-mcp + Claude Desktop 心得](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/34-n8n-vibe-coding)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/VmyyO6nh7Cc)
+
+35.  [n8n + ollama 本機 LLM 模型零基礎學習全家餐｜實測 Gemma3、DeepSeek-R1、Mistral 三種模型](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/SqLrKOArCck)
 
 ## ❗ 常見問題排解 Troubleshooting
 
