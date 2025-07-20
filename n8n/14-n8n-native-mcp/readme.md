@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # n8n 官方 MCP 登場！2 個 n8n AI Agent 情境解析，與 Claude Desktop 完美整合｜EP14｜🧠 省力知識庫[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/Ictp1DCPUg4)
 
 ![EP14 n8n 官方 MCP 登場](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/14-n8n-native-mcp/cover.png?raw=true)

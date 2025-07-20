@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 老師必學！用 n8n 自動化寄發客製化證書，10分鐘打造自動化工作流
 
 ![自動化寄發課程完課證明](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/30-n8n-auto-certificate/cover.png?raw=true)

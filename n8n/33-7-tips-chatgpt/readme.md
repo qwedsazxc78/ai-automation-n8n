@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 訂閱兩年 ChatGPT，6 個幫助我生產力 3x 的功能情境
 
 ![ChatGPT 生產力提升](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/32-7-tips-chatgpt/cover.png?raw=true)

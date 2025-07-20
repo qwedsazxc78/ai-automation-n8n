@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # [2025最新] Google Veo3 AI影片自動生成教學｜搭配 n8n 與 fal.ai 全流程實作
 
 ![Google Veo3 AI影片自動生成教學](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/29-veo3-generate-video/cover.png?raw=true)

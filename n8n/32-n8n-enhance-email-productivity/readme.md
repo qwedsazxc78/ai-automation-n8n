@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 4 個 n8n 提升 mail 生產力的技巧，立馬節省我 50% 處理郵件時間
 
 ![用 n8n 提升 mail 生產力的 4 個技巧](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/32-n8n-enhance-email-productivity/cover.png?raw=true)

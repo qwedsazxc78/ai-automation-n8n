@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 🔥 省力工具！超級翻譯機，1次翻譯100個段落，英翻中、中翻英都可以一次搞定｜n8n 入門｜免費模板下載 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/LtCnZTV3cgs)
 
 ![🔥 省力工具！超級翻譯機，1次翻譯100個段落](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/7-super-translator-100-batch/cover.png?raw=true)

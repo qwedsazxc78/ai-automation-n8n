@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 5分鐘搞定 n8n + MCP 安裝設定｜🧠 省力知識庫 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/pAWAwSCXxig)
 
 ![5分鐘搞定 n8n + MCP 安裝設定](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/12-mcp-community-node/cover.png?raw=true)

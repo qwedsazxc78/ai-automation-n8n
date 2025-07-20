@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 8 分鐘學會 n8n 錯誤處理工作流 Error Workflow！3大通知方法 LINE、Email、Google Sheet 即時掌握 99% 的錯誤｜🧠 省力知識庫[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/Yt0gVZX_OGQ)
 
 ![n8n 錯誤處理工作流](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/18-n8n-error-workflow/cover.png?raw=true)

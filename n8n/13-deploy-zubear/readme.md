@@ -1,3 +1,5 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 如何在 zeabur 一鍵部署 n8n｜🧠 省力知識庫[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/tglGHWaSWc8)
 
 ![如何在 zeabur 一鍵部署 n8n](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/13-deploy-zubear/cover.png?raw=true)

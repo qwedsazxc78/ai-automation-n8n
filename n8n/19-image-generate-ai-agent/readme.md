@@ -1,6 +1,19 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 🔥 省力工具！OpenAI 最新圖片模型 GPT-image-1 登場！如何打造電商商品圖片，建立圖片靈感來源 AI Agent [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/DCjv00f6lXI)
 
 ![OpenAI GPT-image-1 電商品圖 AI Agent](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/19-image-generate-ai-agent/cover.png?raw=true)
+
+## 📋 必要條件 Prerequisites
+
+- n8n v1.0+ 已安裝並運行
+- API Keys 需求:
+  - ✅ OpenAI API Key (GPT-image-1, DALL·E 2/3) (必需)
+  - ✅ LINE Message API Token (必需)
+  - ✅ Google Service Account (必需)
+- 其他工具:
+  - LINE 開發者帳戶
+  - Google Drive 儲存空間
+  - Webhook 接收端點設定
 
 ## 作者資訊
 

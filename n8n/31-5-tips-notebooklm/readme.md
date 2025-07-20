@@ -1,3 +1,4 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
 # 使用半年 NotebookLM ， 5 個幫助我生產力加倍的功能｜AI 高效生產力
 
 ![NotebookLM 專案封面](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/31-5-tips-notebooklm/cover.png?raw=true)

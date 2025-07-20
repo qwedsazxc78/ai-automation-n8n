@@ -1,6 +1,19 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 🔥 省力工具！發票自動整理機器人，用 n8n 幫你把發票自動變表單。[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q)
 
 ![發票自動整理機器人](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/1-simple-invoice-automation/cover.png?raw=true)
+
+## 📋 必要條件 Prerequisites
+
+- n8n v1.0+ 已安裝並運行
+- API Keys 需求:
+  - ✅ OpenAI API Key (ChatGPT) (必需)
+  - ✅ Google Service Account (必需)
+- 其他工具:
+  - Gmail 帳戶並啟用 Gmail API
+  - Google Drive 儲存空間
+  - Google Sheets 試算表權限
 
 ## 作者資訊
 

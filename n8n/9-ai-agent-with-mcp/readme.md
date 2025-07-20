@@ -1,6 +1,18 @@
+> 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁体中文](./readme.md)
+
 # 什麼是 MCP？ 3 個 n8n AI Agent 情境解析 MCP 使用 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/MwHuCtkzvdo)
 
 ![MCP 影片封面](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/9-ai-agent-with-mcp/cover.png?raw=true)
+
+## 📋 必要條件 Prerequisites
+
+- n8n v1.0+ 已安裝並運行
+- API Keys 需求:
+  - ✅ OpenAI API Key (必需)
+  - ✅ Airtable API Key (必需)
+- 其他工具:
+  - MCP (Model Context Protocol) 支援環境
+  - Airtable 工作區存取權限
 
 ## 作者資訊
 
