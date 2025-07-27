@@ -211,6 +211,9 @@ docker-compose up -d
 35. [n8n + Ollama Local LLM Zero-to-Hero Tutorial | Testing Gemma3, DeepSeek-R1, Mistral Models](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/SqLrKOArCck)
 
+36. [Perplexity Pro 2-Year Deal at $12.99 USD! 5 Perplexity Labs Applications Tested - The Ultimate AI Agent for Reports, Websites, and Presentations｜AI Productivity](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/36-perplexity-5-lab-hand-on)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start

@@ -211,6 +211,9 @@ docker-compose up -d
 35.  [n8n + ollama 本機 LLM 模型零基礎學習全家餐｜實測 Gemma3、DeepSeek-R1、Mistral 三種模型](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/SqLrKOArCck)
 
+36.  [Perplexity Pro 2 年 12.99US 快買！5 種 Perplexity Labs 應用實測，最強 Agent 幫你寫報告、做網站、簡報生成｜AI 高效生產力](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/36-perplexity-5-lab-hand-on)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/)
+
 ## ❗ 常見問題排解 Troubleshooting
 
 ### n8n 無法啟動
