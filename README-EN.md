@@ -97,6 +97,7 @@ docker-compose up -d
 * [#23 26 n8n Tips Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
 * [#24 26 n8n Tips Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
 * [#35 Ollama Local LLM Deployment](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
+* [#38 OpenAI OSS Model Local Testing](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
 
 ### 🎥 Video Generation
 
@@ -216,6 +217,9 @@ docker-compose up -d
 
 37. [How to Build n8n AI Agent Assistant for Your Website! 3 Cases for Zero-to-Hero Learning](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/37-webchat-wtth-n8n)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/tgoLIuXPX5s)
+
+38. [Can OpenAI's Latest Open Source GPT OSS Model Run on Laptops? Local Ollama Mac GPU Testing + OpenAI 4.1 API Comparison Experience](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/kBcSEtMFgak)
 
 ## ❗ Troubleshooting
 

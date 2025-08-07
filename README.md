@@ -97,6 +97,7 @@ docker-compose up -d
 * [#23 26個 n8n 技巧 Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
 * [#24 26個 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
 * [#35 Ollama 本機 LLM 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
+* [#38 OpenAI OSS 模型本地測試](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
 
 ### 🎥 影片生成
 
@@ -216,6 +217,9 @@ docker-compose up -d
 
 37.  [如何在你的網站，打造 n8n AI Agent助手！3 個案例讓你 0 基礎入門](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/37-webchat-wtth-n8n)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/tgoLIuXPX5s)
+
+38.  [Open AI 最新開源 GPT OSS 模型筆電也能用？本地 ollama Mac GPU 實測 ＋ OpenAI 4.1 API 比較體驗](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/kBcSEtMFgak)
 
 ## ❗ 常見問題排解 Troubleshooting
 

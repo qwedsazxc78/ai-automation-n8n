@@ -97,6 +97,7 @@ docker-compose up -d
 * [#23 26个 n8n 技巧 Part 1](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/23-n8n-26-tips-1-16)
 * [#24 26个 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
 * [#35 Ollama 本地 LLM 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
+* [#38 OpenAI OSS 模型本地测试](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
 
 ### 🎥 视频生成
 
@@ -216,6 +217,9 @@ docker-compose up -d
 
 37. [如何在你的网站，打造 n8n AI Agent助手！3 个案例让你 0 基础入门](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/37-webchat-wtth-n8n)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/tgoLIuXPX5s)
+
+38. [Open AI 最新开源 GPT OSS 模型笔电也能用？本地 ollama Mac GPU 实测 + OpenAI 4.1 API 比较体验](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/kBcSEtMFgak)
 
 ## ❗ 常见问题排解
 
