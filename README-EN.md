@@ -221,6 +221,9 @@ docker-compose up -d
 38. [Can OpenAI's Latest Open Source GPT OSS Model Run on Laptops? Local Ollama Mac GPU Testing + OpenAI 4.1 API Comparison Experience](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/kBcSEtMFgak)
 
+39. [Discount Code Collection! Lovable vs Replit vs Bolt Showdown - Why I Choose Lovable as My Starting Tool! 5 Key Aspects to Choose Your Perfect Vibe Coding Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/39-lovable-bolt-replit)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/pYVdEz_mC-Y)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start

@@ -221,6 +221,9 @@ docker-compose up -d
 38. [Open AI 最新开源 GPT OSS 模型笔电也能用？本地 ollama Mac GPU 实测 + OpenAI 4.1 API 比较体验](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/kBcSEtMFgak)
 
+39. [折扣码大集合！Lovable、Replit 与 Bolt 大 PK，为何我选择用 Lovable 起手！5大面向选择适合你的 vibe coding 工具](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/39-lovable-bolt-replit)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/pYVdEz_mC-Y)
+
 ## ❗ 常见问题排解
 
 ### n8n 无法启动
