@@ -29,3 +29,28 @@
 * **API串接与格式化教学**：如何使用ChatGPT 4.1协助整理结构化信息，并调整payload格式对接不同服务。
 * **Retell.ai与Twilio整合**：如何在申请美国号码，设置Elastic SIP Trunking，解锁国际通话障碍。
 * **Webhook与自动化纪录**：利用Webhook回写通话结果、错误协助自动纪录于Google Sheet，建立完整监控。
+
+---
+
+## 🚀 快速上手 n8n 自動化資源懶人包
+
+### 🎓 學習與社群
+
+* 🔗 [加入 AI 學習社群 (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
+  建立學習 AI 與 n8n 的學習路徑，無痛上手！
+* 🔗 [加入 Line 社群一起搞懂 AI](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg)
+  互相幫助前進！打造自己的 AI 自動化場景！
+
+### 📚 教學資源
+
+* 🎥 [n8n AI 自動化工作流：從基礎到進階實戰](https://youtube.com/playlist?list=PLUf88uk7T54I83MBdbuXgUuA8rVklF4FA&si=wHsQw8YJu-erSdLd)
+  YouTube 系列教學，邊看邊做快速上手！
+* ⏱️ [碎片化時間學習 n8n](https://youtube.com/playlist?list=PLUf88uk7T54Iv6LV2NFgdTghaX2cPhtgH&si=G3gj2qn179ZFUqAZ)
+  每天5分鐘學習，自動化養成沒負擔。
+
+### 🛠️ 部署與工具
+
+* 🧩 [zeabur n8n 部署模板 (隨時更新)](https://zeabur.com/zh-TW/templates/0TUVZ7?referralDesktop=qwedsazxc78)
+  零架設壓力，點擊部署即可使用，適合初學者與進階用戶。
+* 🌐 [n8n 官方網站](https://n8n.io/)
+  了解更多功能與文件，掌握最新更新。
