@@ -69,6 +69,7 @@
 
 ### 🛠️ 工具與資源
 
+下載最强AI剪輯軟體Edimakor👉 https://shorturl.at/6uZ7D
 * [Hitpaw Edimakor 官網](https://www.hitpaw.com/zh-tw/video-editor.html)——功能自由且價格合理的 AI 影片創作軟體。
 * [圖片 AI 生成功能集合 & 推薦資源](https://github.com/qwedsazxc78/ai-automation-n8n)——實作與腳本持續更新
 * [影片腳本提示詞下載](#)——敬請參閱影片資訊欄/社群資源
