@@ -11,6 +11,44 @@
 * **本地測試**：無需 Docker Hub 即可在本地建置和測試
 * **Docker Compose 就緒**：包含完整的 docker-compose.yml 設置
 
+## 預設社群節點
+
+本映像預設包含以下社群節點：
+
+### 核心整合節點
+* **n8n-nodes-mcp** - MCP (Model Context Protocol) 節點，用於與 AI 模型整合
+* **n8n-nodes-linewebhook** - LINE 訊息平台 webhook 整合節點
+* **n8n-nodes-ragic** - [Ragic](https://www.ragic.com/) 整合節點，用於連接 Ragic 線上資料庫系統
+
+### 推薦額外節點
+
+#### 通訊與社群
+* **n8n-nodes-discord-trigger** - Discord 觸發器節點，監聽 Discord 事件與訊息
+
+#### 文件處理
+* **n8n-nodes-document-generator** - 文件生成器，支援多種格式的文件建立
+* **n8n-nodes-pdfco** - PDF.co 整合，提供 PDF 處理、轉換和編輯功能
+* **n8n-nodes-webpage-content-extractor** - 網頁內容擷取器，智慧提取網頁資訊
+
+#### 工具與實用程式
+* **n8n-nodes-qrcode** - QR Code 生成與解析節點
+* **n8n-nodes-edit-image-plus** - 進階圖片編輯功能，支援多種圖片處理操作
+* **@tavily/core** - Tavily AI 搜尋引擎整合，提供智慧網路搜尋功能
+
+### 探索更多社群節點
+
+想要發現更多強大的社群節點？請查看：
+
+🌟 **[Awesome N8N: Top 100 Community Nodes](https://github.com/restyler/awesome-n8n)**
+
+這個精選列表包含超過 100 個社群節點，涵蓋各種整合：
+- AI/ML 服務整合
+- 社交媒體平台
+- 雲端儲存服務
+- 資料庫連接器
+- 通訊工具
+- 以及更多...
+
 ## 快速開始
 
 ### 選項 1：使用預建映像
@@ -54,7 +92,7 @@ IMAGE_TAG=latest
 N8N_VERSION=1.109.2
 
 # 社群節點（空格分隔）
-COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook"
+COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-ragic"
 
 # 建置平台
 PLATFORMS=linux/amd64,linux/arm64
@@ -142,9 +180,39 @@ docker-compose down -v
 # 單一節點
 COMMUNITY_NODES="n8n-nodes-mcp"
 
-# 多個節點
-COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-your-custom"
+# 多個節點（預設配置）
+COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-ragic"
+
+# 添加自訂節點
+COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-ragic n8n-nodes-your-custom"
 ```
+
+#### 常用社群節點範例
+
+```env
+# AI/LLM 整合
+COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-openai-assistant n8n-nodes-langchain @tavily/core"
+
+# 台灣本地服務
+COMMUNITY_NODES="n8n-nodes-linewebhook n8n-nodes-ragic"
+
+# 文件與內容處理
+COMMUNITY_NODES="n8n-nodes-document-generator n8n-nodes-pdfco n8n-nodes-webpage-content-extractor"
+
+# 社群平台整合
+COMMUNITY_NODES="n8n-nodes-discord-trigger n8n-nodes-linewebhook"
+
+# 圖像與媒體處理
+COMMUNITY_NODES="n8n-nodes-qrcode n8n-nodes-edit-image-plus"
+
+# 資料庫與 API
+COMMUNITY_NODES="n8n-nodes-mongodb n8n-nodes-graphql n8n-nodes-redis"
+
+# 完整功能套組（包含所有推薦節點）
+COMMUNITY_NODES="n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-ragic n8n-nodes-discord-trigger n8n-nodes-qrcode n8n-nodes-webpage-content-extractor n8n-nodes-document-generator n8n-nodes-pdfco @tavily/core n8n-nodes-edit-image-plus"
+```
+
+💡 **提示**：從 [Awesome N8N](https://github.com/restyler/awesome-n8n) 尋找更多節點！
 
 ### 更新 n8n 版本
 
@@ -240,7 +308,7 @@ docker-compose down
 | `IMAGE_NAME` | Docker 映像名稱 | `n8n-community` |
 | `IMAGE_TAG` | Docker 映像標籤 | `latest` |
 | `N8N_VERSION` | n8n 基礎映像版本 | `1.109.2` |
-| `COMMUNITY_NODES` | 空格分隔的節點列表 | `n8n-nodes-mcp n8n-nodes-linewebhook` |
+| `COMMUNITY_NODES` | 空格分隔的節點列表 | `n8n-nodes-mcp n8n-nodes-linewebhook n8n-nodes-ragic` |
 | `PLATFORMS` | 建置平台 | `linux/amd64,linux/arm64` |
 | `POSTGRES_USER` | PostgreSQL 使用者名稱 | `n8n` |
 | `POSTGRES_PASSWORD` | PostgreSQL 密碼 | `n8npass` |
