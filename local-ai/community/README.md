@@ -2,6 +2,69 @@
 
 多平台 Docker 映像，擴展 n8n 並加入社群節點，遵循 [n8n 官方社群節點安裝方法](https://docs.n8n.io/integrations/community-nodes/installation/manual-install/)。
 
+## ⚠️ 重要注意事項
+
+### 資料持久化與社群節點
+
+如果您已經使用過 n8n 並掛載了資料卷，**新建置的映像將無法覆蓋已存在的社群節點配置**。這是因為：
+
+```yaml
+volumes:
+  - n8n_data:/home/node/.n8n  # 現有資料會保持不變
+```
+
+**環境差異說明：**
+- ✅ **Docker Compose**：完全支援，可正常運作
+- ⚠️ **Kubernetes**：PVC 無法在多個 n8n Pod 間共享，可能造成問題
+
+### 🔍 驗證社群節點安裝
+
+要確認社群節點是否正確安裝，請按照以下步驟：
+
+**方法 1：使用容器終端**
+```bash
+# 進入容器
+docker exec -it <container-name> sh
+
+# 檢查社群節點目錄
+cd /home/node/.n8n/nodes
+ls -la
+
+# 查看 package.json 內容
+cat package.json
+```
+
+**方法 2：通過 Docker Compose**
+```bash
+# 檢查社群節點安裝狀態
+docker-compose exec n8n ls -la /home/node/.n8n/nodes/
+docker-compose exec n8n cat /home/node/.n8n/nodes/package.json
+```
+
+**預期結果：**
+您應該看到類似以下的 package.json 內容：
+```json
+{
+  "dependencies": {
+    "@tavily/core": "^0.5.11",
+    "n8n-nodes-discord-trigger": "^0.8.0",
+    "n8n-nodes-document-generator": "^1.0.10",
+    "n8n-nodes-edit-image-plus": "^0.1.10",
+    "n8n-nodes-linewebhook": "^0.1.50",
+    "n8n-nodes-mcp": "^0.1.29",
+    "n8n-nodes-pdfco": "^1.0.6",
+    "n8n-nodes-qrcode": "^0.1.0",
+    "n8n-nodes-ragic": "^2.3.1",
+    "n8n-nodes-webpage-content-extractor": "^0.1.3"
+  }
+}
+```
+
+**如果社群節點未正確安裝：**
+1. 清除現有資料卷：`docker-compose down -v`
+2. 重新建置映像並啟動服務
+3. 再次驗證安裝結果
+
 ## 功能特點
 
 * **多平台支援**：支援 AMD64 (Intel/AMD) 和 ARM64 (Apple Silicon) - Docker 自動選擇正確架構
