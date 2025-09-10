@@ -1,91 +1,91 @@
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁體中文](./readme.md)
 
-# n8n + ollama 本地 LLM 模型零基础学习全家餐｜实测 Gemma3、DeepSeek-R1、Mistral 三种模型
+# n8n 社区节点全攻略｜打造专属 Docker 镜像，一次安装数十种扩展功能
 
-![n8n + ollama 本地 LLM 模型零基础学习全家餐｜实测 Gemma3、DeepSeek-R1、Mistral 三种模型](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/35-n8n-with-ollama/cover.png?raw=true)
+![n8n 社区节点全攻略｜打造专属 Docker 镜像，一次安装数十种扩展功能](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/42-n8n-community-node/cover.png?raw=true)
+
+---
+
+## 【 3 大视频重点】
+
+* 1️⃣ **如何用 GUI 安装**：如何直接在后台直接安装社区节点，简单直观。
+* 2️⃣ **热门社区节点攻略**：热门社区节点前10 名，包含 MCP、LINE Webhook、PDF 处理等必装节点。
+* 3️⃣ **一键 Docker 镜像制作实战**：打造 10+ 社区节点的 n8n docker 镜像，从 Dockerfile 编写、多平台构建到 Docker Hub 发布，一次搞定。
 
 ---
 
 ## 🎯 目标
 
-* 🚀 本地环境（Mac/Windows）快速安装和设置 Ollama，并结合 n8n 自动化流程。
-* 🔥 熟悉本地部署三大热门 LLM 模型：Gemma3、Deepseek-R1、Mistral，学会模型下载、验证及实测。
-* 🛠️ 掌握 WebUI 与 Docker 的部署技巧，完成与 Ollama API/本地模型的串接。
+* 🚀 学会在 n8n GUI 界面快速安装社区节点，零技术门槛即可扩展功能。
+* 🛠️ 掌握热门社区节点的实战应用，打造企业级自动化工作流程。
+* 🎓 一键建立包含 10+ 社区节点的 Docker 镜像，实现标准化部署。
 
 ---
 
 ## 🛠️ 对应场景
 
-* 想用本地 LLM 模型（重视个资、低门槛），不依赖云端 OpenAI。
-* 企业研发、教育单位和程序小白也能部署私人 AI 助理。
-* 希望在台式机、笔记本轻松安装多模型，随选即用，不限系统平台。
-* 想把 LLM 模型串入 n8n，打造属于自己的本地 AI 工作流。
+* 快速上手 n8n 社区节点，通过 GUI 界面轻松安装。
+* 需要热门社区节点整合 LINE、MCP、PDF 等热门服务的自动化团队。
+* 企业需要标准化部署，一次打包 10+ 必装社区节点。
+* 开发者想要建立可重复使用的 Docker 镜像，加速团队协作。
 
 ---
+
 
 ## 🎥 你可以从视频中获得
 
-* **全流程教学与操作 Demo**：从环境安装（Ollama、WebUI、Docker Compose）到模型下载、流程一站搞定。
-* **三大主流本地 LLM 模型安装心得**：Gemma3、Deepseek-R1、Mistral 安装与测试。
-* **模型管理与效能验证技巧**：如何确认模型成功下载、掌握本地 Models 目录与文件结构。
-* **API 串接与 n8n 整合实战**：详细教你如何设置与本地 Ollama API 连动，建构自己的 n8n AI 流程。
-* **Open WebUI Docker 部署 QA 教学**：从设置 Ollama 连接、资料夹模型路径到实测！
+* **GUI 安装完整教学**：手把手教你在 n8n 后台直接安装社区节点，3 分钟搞定。
+* **Top 10 社区节点一次打包**：详解 MCP、LINE Webhook、PDF.co 等必装节点的实战应用。
+* **Docker 镜像一键打包**：预装 10+ 社区节点的 Dockerfile 编写与多平台构建技巧。
+* **从零到部署完整流程**：包含本地测试、Docker Hub 发布、生产环境配置。
 
 ---
 
-## 👶 初学者也适用！
+## 🌟 10 大热门 n8n 社区节点
 
-* 0基础入门者：完整拆解步骤，看一次就能做。
-* 本地部署爱好者：想将 LLM AI 安全放在自己电脑上。
-* 自动化/开发者：需要将模型整合进自动化流程、API 串接实践。
-* 教育与企业团队：想降低云端依赖，掌控敏感数据。
+🌟 **[Awesome N8N: Top 100 Community Nodes](https://github.com/restyler/awesome-n8n)**
 
----
+### 🤖 AI 与智能整合
+* **MCP (Model Context Protocol)**：与 Claude、GPT 等 AI 模型深度整合
+* **Tavily AI 搜索**：智能网络搜索引擎整合，提供精准信息检索
 
-## 🚀 快速上手 n8n 自动化资源懒人包
+### 📱 通讯与社群平台
+* **LINE Webhook**：完整 LINE 消息平台整合，支持群组与个人消息
+* **Discord 触发器**：监听 Discord 事件，打造社群自动化机器人
 
-### 🎓 学习与社区
+### 📄 文档与内容处理
+* **PDF.co 整合**：专业 PDF 处理、转换和编辑功能
+* **网页内容提取器**：智能提取网页信息，支持动态内容
+* **文档生成器**：支持多种格式的专业文档创建
 
-* 🔗 [加入 AI 学习社区 (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
-  建立学习 AI 与 n8n 的学习路径，轻松上手！
-* 🔗 [加入 Line 社区一起学习 AI](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg)
-  互相帮助前进！打造自己的 AI 自动化场景！
-
-### 📚 教学资源
-
-* 🎥 [n8n AI 自动化工作流：从基础到进阶实战](https://youtube.com/playlist?list=PLUf88uk7T54I83MBdbuXgUuA8rVklF4FA&si=wHsQw8YJu-erSdLd)
-  YouTube 系列教学，边看边做快速上手！
-* ⏱️ [碎片化时间学习 n8n](https://youtube.com/playlist?list=PLUf88uk7T54Iv6LV2NFgdTghaX2cPhtgH&si=G3gj2qn179ZFUqAZ)
-  每天5分钟学习，自动化养成没负担。
-
-### 🛠️ 部署与工具
-
-* 🧩 [zeabur n8n 部署模板 (随时更新)](https://zeabur.com/zh-TW/templates/0TUVZ7?referralDesktop=qwedsazxc78)
-  零架设压力，点击部署即可使用，适合初学者与进阶用户。
-* 🌐 [n8n 官方网站](https://n8n.io/)
-  了解更多功能与文档，掌握最新更新。
+### 🛠️ 实用工具
+* **QR Code 生成器**：快速生成与解析 QR Code
+* **高级图片编辑**：支持多种图片处理操作
+* **Ragic 整合**：台湾本土在线数据库系统连接
 
 ---
 
-## 🚀 快速上手 n8n 自動化資源懶人包
+## 📦 本地测试环境快速启动
 
-### 🎓 學習與社群
+想要使用预装 10+ 社区节点的环境？只需要三个步骤：
 
-* 🔗 [加入 AI 學習社群 (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
-  建立學習 AI 與 n8n 的學習路徑，無痛上手！
-* 🔗 [加入 Line 社群一起搞懂 AI](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg)
-  互相幫助前進！打造自己的 AI 自動化場景！
+```bash
+# 1. 进入社区节点目录
+cd local-ai/community/
 
-### 📚 教學資源
+# 2. 设置环境变量
+cp .env.example .env
+# 编辑 .env 配置文件（可使用默认值）
 
-* 🎥 [n8n AI 自動化工作流：從基礎到進階實戰](https://youtube.com/playlist?list=PLUf88uk7T54I83MBdbuXgUuA8rVklF4FA&si=wHsQw8YJu-erSdLd)
-  YouTube 系列教學，邊看邊做快速上手！
-* ⏱️ [碎片化時間學習 n8n](https://youtube.com/playlist?list=PLUf88uk7T54Iv6LV2NFgdTghaX2cPhtgH&si=G3gj2qn179ZFUqAZ)
-  每天5分鐘學習，自動化養成沒負擔。
+# 3. 启动完整环境
+docker-compose up -d
 
-### 🛠️ 部署與工具
+# 访问 n8n：http://localhost:5678
+# 默认登录：admin/adminpass
+```
 
-* 🧩 [zeabur n8n 部署模板 (隨時更新)](https://zeabur.com/zh-TW/templates/0TUVZ7?referralDesktop=qwedsazxc78)
-  零架設壓力，點擊部署即可使用，適合初學者與進階用戶。
-* 🌐 [n8n 官方網站](https://n8n.io/)
-  了解更多功能與文件，掌握最新更新。
+这个环境包含：
+* ✅ n8n 最新版本
+* ✅ PostgreSQL 数据库持久化
+* ✅ 预安装 10+ 热门社区节点（MCP、LINE、PDF 等）
+* ✅ 多平台支持（自动选择架构）

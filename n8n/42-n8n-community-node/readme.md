@@ -1,6 +1,6 @@
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁體中文](./readme.md)
 
-# n8n 社群節點全攻略｜打造專屬 Docker 映像，一次安裝數十種擴充功能
+# n8n 一鍵安裝10個社群節點教學｜GUI＋Docker 完整攻略
 
 ![n8n 社群節點全攻略｜打造專屬 Docker 映像，一次安裝數十種擴充功能](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/42-n8n-community-node/cover.png?raw=true)
 
@@ -24,8 +24,8 @@
 
 ## 🛠️ 對應情境
 
-* 初學者想要快速上手 n8n 社群節點，透過 GUI 介面輕鬆安裝。
-* 需要整合 LINE、MCP、PDF 等熱門服務的自動化團隊。
+* 快速上手 n8n 社群節點，透過 GUI 介面輕鬆安裝。
+* 需要熱門社群節點整合 LINE、MCP、PDF 等熱門服務的自動化團隊。
 * 企業需要標準化部署，一次打包 10+ 必裝社群節點。
 * 開發者想要建立可重複使用的 Docker 映像，加速團隊協作。
 
@@ -41,7 +41,7 @@
 
 ---
 
-## 🌟 10 大熱門 n8n 社群節點
+## 🌟 100 大熱門 n8n 社群節點
 
 🌟 **[Awesome N8N: Top 100 Community Nodes](https://github.com/restyler/awesome-n8n)**
 
