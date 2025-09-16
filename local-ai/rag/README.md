@@ -101,8 +101,27 @@ curl -X PUT http://localhost:6333/collections/documents \
 #### 插入向量資料
 
 ```bash
+# 無 API 金鑰（開發環境）
 curl -X PUT http://localhost:6333/collections/documents/points \
   -H 'Content-Type: application/json' \
+  -d '{
+    "points": [
+      {
+        "id": 1,
+        "vector": [0.05, 0.61, 0.76, ...],
+        "payload": {
+          "content": "這是文件內容",
+          "source": "document.pdf",
+          "page": 1
+        }
+      }
+    ]
+  }'
+
+# 使用 API 金鑰（生產環境）
+curl -X PUT http://localhost:6333/collections/documents/points \
+  -H 'Content-Type: application/json' \
+  -H 'api-key: ${QDRANT_API_KEY}' \
   -d '{
     "points": [
       {
@@ -121,8 +140,19 @@ curl -X PUT http://localhost:6333/collections/documents/points \
 #### 搜尋相似向量
 
 ```bash
+# 無 API 金鑰（開發環境）
 curl -X POST http://localhost:6333/collections/documents/points/search \
   -H 'Content-Type: application/json' \
+  -d '{
+    "vector": [0.2, 0.1, 0.9, ...],
+    "limit": 5,
+    "with_payload": true
+  }'
+
+# 使用 API 金鑰（生產環境）
+curl -X POST http://localhost:6333/collections/documents/points/search \
+  -H 'Content-Type: application/json' \
+  -H 'api-key: ${QDRANT_API_KEY}' \
   -d '{
     "vector": [0.2, 0.1, 0.9, ...],
     "limit": 5,
