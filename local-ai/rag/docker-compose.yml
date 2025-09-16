@@ -63,6 +63,7 @@ services:
       - QDRANT__SERVICE__HTTP_PORT=${QDRANT_PORT:-6333}
       - QDRANT__SERVICE__GRPC_PORT=${QDRANT_GRPC_PORT:-6334}
       - QDRANT__LOG_LEVEL=${QDRANT_LOG_LEVEL:-INFO}
+      - QDRANT__SERVICE__API_KEY=${QDRANT_API_KEY:-}
     volumes:
       - qdrant_data:/qdrant/storage
     networks:

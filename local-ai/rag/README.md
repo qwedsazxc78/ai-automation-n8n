@@ -11,6 +11,30 @@
 - **PostgreSQL**: n8n 的後端資料庫
 - **Ollama** (選用): 本地大型語言模型服務
 
+## 環境變數說明
+
+### PostgreSQL 設定
+- `POSTGRES_USER`: 資料庫使用者名稱（預設：n8n）
+- `POSTGRES_PASSWORD`: 資料庫密碼（預設：n8npass）
+- `POSTGRES_DB`: 資料庫名稱（預設：n8n）
+- `POSTGRES_PORT`: 資料庫連接埠（預設：5432）
+
+### n8n 設定
+- `N8N_PORT`: n8n 服務連接埠（預設：5678）
+- `N8N_BASIC_AUTH_USER`: n8n 登入使用者名稱（預設：admin）
+- `N8N_BASIC_AUTH_PASSWORD`: n8n 登入密碼（預設：adminpass）
+- `N8N_HOST`: n8n 主機名稱（預設：localhost）
+- `WEBHOOK_URL`: Webhook 基礎 URL（預設：http://localhost:5678）
+
+### Qdrant 設定
+- `QDRANT_PORT`: Qdrant HTTP API 連接埠（預設：6333）
+- `QDRANT_GRPC_PORT`: Qdrant gRPC 連接埠（預設：6334）
+- `QDRANT_LOG_LEVEL`: 日誌等級（預設：INFO）
+- `QDRANT_API_KEY`: API 認證金鑰（選用，生產環境建議設定）
+
+### Ollama 設定
+- `OLLAMA_MODEL_PATH`: 模型儲存路徑（預設：/root/.ollama）
+
 ## 快速開始
 
 1. **複製環境變數檔案**
@@ -18,6 +42,7 @@
 ```bash
 cp .env.example .env
 # 編輯 .env 檔案，設定必要的參數
+# 注意：生產環境請設定 QDRANT_API_KEY 以啟用 API 認證
 ```
 
 2. **啟動所有服務**
@@ -51,8 +76,20 @@ docker-compose ps
 #### 建立 Collection
 
 ```bash
+# 無 API 金鑰（開發環境）
 curl -X PUT http://localhost:6333/collections/documents \
   -H 'Content-Type: application/json' \
+  -d '{
+    "vectors": {
+      "size": 1536,
+      "distance": "Cosine"
+    }
+  }'
+
+# 使用 API 金鑰（生產環境）
+curl -X PUT http://localhost:6333/collections/documents \
+  -H 'Content-Type: application/json' \
+  -H 'api-key: ${QDRANT_API_KEY}' \
   -d '{
     "vectors": {
       "size": 1536,
@@ -132,8 +169,9 @@ n8n 提供原生的 Qdrant 節點，支援以下操作：
 
 1. **Host**: `qdrant` (Docker 網路內部) 或 `localhost` (外部連線)
 2. **Port**: `6333`
-3. **Collection Name**: 自訂名稱（如 `documents`）
-4. **Vector Size**: 根據使用的 Embedding 模型（OpenAI: 1536, Ollama: 依模型而定）
+3. **API Key**: 如果設定了 `QDRANT_API_KEY`，需要在 n8n 的 Qdrant 憑證中填入
+4. **Collection Name**: 自訂名稱（如 `documents`）
+5. **Vector Size**: 根據使用的 Embedding 模型（OpenAI: 1536, Ollama: 依模型而定）
 
 ### 4. 使用 HTTP Request 節點操作 Qdrant
 
@@ -206,9 +244,11 @@ n8n 提供原生的 Qdrant 節點，支援以下操作：
 ### 安全性設定
 
 1. **Qdrant API 金鑰**（生產環境）
-   ```yaml
-   environment:
-     - QDRANT__SERVICE__API_KEY=${QDRANT_API_KEY}
+   - 在 `.env` 檔案中設定 `QDRANT_API_KEY`
+   - API 金鑰會自動傳遞給 Qdrant 容器
+   - 當設定 API 金鑰後，所有 API 請求都需要包含認證標頭：
+   ```bash
+   curl -H "api-key: your_api_key" http://localhost:6333/collections
    ```
 
 2. **網路隔離**
