@@ -1,0 +1,81 @@
+# n8n local docker - enhanced basic version
+# n8n documentation: https://docs.n8n.io/hosting/installation/docker/
+
+services:
+  postgres:
+    image: postgres:15.3-alpine
+    restart: always
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-n8n}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-n8npass}
+      POSTGRES_DB: ${POSTGRES_DB:-n8n}
+    volumes:
+      - n8n_postgres_data:/var/lib/postgresql/data
+    networks:
+      - n8n_network
+
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    ports:
+      - "${N8N_PORT:-5678}:5678"
+    environment:
+      # Database connection
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=${POSTGRES_PORT:-5432}
+      - DB_POSTGRESDB_DATABASE=${POSTGRES_DB:-n8n}
+      - DB_POSTGRESDB_USER=${POSTGRES_USER:-n8n}
+      - DB_POSTGRESDB_PASSWORD=${POSTGRES_PASSWORD:-n8npass}
+
+      # Authentication
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_BASIC_AUTH_USER:-admin}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_BASIC_AUTH_PASSWORD:-adminpass}
+      - N8N_RUNNERS_ENABLED=true
+
+      # Host configuration
+      - N8N_HOST=${N8N_HOST:-localhost}
+      - N8N_PORT=${N8N_PORT:-5678}
+      - WEBHOOK_URL=${WEBHOOK_URL:-http://localhost:5678}
+
+      # Execution settings
+      - GENERIC_TIMEZONE=Asia/Taipei
+      - TZ=Asia/Taipei
+
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - n8n_network
+    depends_on:
+      - postgres
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    hostname: qdrant
+    container_name: qdrant
+    restart: unless-stopped
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+    environment:
+      - QDRANT__SERVICE__HTTP_PORT=${QDRANT_PORT:-6333}
+      - QDRANT__SERVICE__GRPC_PORT=${QDRANT_GRPC_PORT:-6334}
+      - QDRANT__LOG_LEVEL=${QDRANT_LOG_LEVEL:-INFO}
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - n8n_network
+
+networks:
+  n8n_network:
+    driver: bridge
+
+volumes:
+  n8n_postgres_data:
+    name: n8n_basic_postgres_data  # Stores PostgreSQL database files
+  n8n_data:
+    name: n8n_basic_data  # Stores n8n workflows, credentials, and binary data
+  qdrant_data:
+    name: qdrant_data
