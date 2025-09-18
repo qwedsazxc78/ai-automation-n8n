@@ -224,6 +224,18 @@ docker-compose up -d
 39. [Discount Code Collection! Lovable vs Replit vs Bolt Showdown - Why I Choose Lovable as My Starting Tool! 5 Key Aspects to Choose Your Perfect Vibe Coding Tool](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/39-lovable-bolt-replit)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/pYVdEz_mC-Y)
 
+40. [6 Scenarios to Master 95% of Gemini AI Features - How to Use Latest Image, Video & Audio Conversion](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/40-gemini-6-user-case)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/sh-YtfXQM70)
+
+41. [Create Cat Adoption Stories with AI! 5 Steps to Great Stories with Hitpaw Edimakor AI](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/41-cat-story-with-ai)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/rHNd9AMRRDE)
+
+42. [n8n One-Click Installation of 10 Community Nodes Tutorial | GUI + Docker Complete Guide](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/42-n8n-community-node)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
+
+43. [SMB Customer Management | n8n Automates Quotes for 5 Companies at Once](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/43-smb-quote-automation)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start

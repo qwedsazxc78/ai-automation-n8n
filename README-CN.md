@@ -224,6 +224,18 @@ docker-compose up -d
 39. [折扣码大集合！Lovable、Replit 与 Bolt 大 PK，为何我选择用 Lovable 起手！5大面向选择适合你的 vibe coding 工具](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/39-lovable-bolt-replit)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/pYVdEz_mC-Y)
 
+40. [6 种场景学会 Gemini AI 95% 的功能，最新图片、视频与音频转换怎样用？](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/40-gemini-6-user-case)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/sh-YtfXQM70)
+
+41. [用 AI 打造猫咪领养故事！5个步骤用 Hitpaw Edimakor AI 剪出好故事](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/41-cat-story-with-ai)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/rHNd9AMRRDE)
+
+42. [n8n 一键安装10个社区节点教学｜GUI＋Docker 完整攻略](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/42-n8n-community-node)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
+
+43. [中小企业客户管理｜n8n 一次搞定 5 家公司报价单自动化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/43-smb-quote-automation)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
+
 ## ❗ 常见问题排解
 
 ### n8n 无法启动
