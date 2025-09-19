@@ -98,11 +98,18 @@ docker-compose up -d
 * [#24 26個 n8n 技巧 Part 2](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/24-n8n-26-tips-16-26)
 * [#35 Ollama 本機 LLM 部署](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/35-n8n-with-ollama)
 * [#38 OpenAI OSS 模型本地測試](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/38-openai-oss-model)
+* [#40 Gemini AI 6大應用場景](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/40-gemini-6-user-case)
+* [#42 n8n 社群節點安裝](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/42-n8n-community-node)
 
-### 🎥 影片生成
+### 🎥 影片與內容創作
 
 * [#22 產品影片自動化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/22-n8n-product-video-automation)
 * [#29 Google Veo3 影片生成](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/29-veo3-generate-video)
+* [#41 AI 貓咪領養故事創作](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/41-cat-story-with-ai)
+
+### 💼 商業應用
+
+* [#43 中小企業報價單自動化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/43-smb-quote-automation)
 
 ---
 
