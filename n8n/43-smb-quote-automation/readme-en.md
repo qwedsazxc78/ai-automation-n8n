@@ -4,6 +4,9 @@
 
 ![n8n Quote Automation Solution](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/43-smb-quote-automation/cover.png?raw=true)
 
+* Gologin Promo Code - https://bit.ly/gologin_alex-hsieh
+* Or use promo code `ALEX666GOLOGIN` for 2GB free proxy traffic, direct international access
+
 ---
 
 ## 🎯 Goals

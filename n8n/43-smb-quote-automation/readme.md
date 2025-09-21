@@ -4,6 +4,10 @@
 
 ![n8n 報價單自動化解決方案](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/43-smb-quote-automation/cover.png?raw=true)
 
+
+* Gologin 優惠碼 - https://bit.ly/gologin_alex-hsieh
+* 或用優惠碼 `ALEX666GOLOGIN` ，送 2GB 免費代理流量，直接跳板跳國外
+
 ---
 
 ## 🎯 目標
