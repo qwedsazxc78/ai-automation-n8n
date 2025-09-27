@@ -1,91 +1,68 @@
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./readme-en.md) | [🇨🇳 简体中文](./readme-cn.md) | [🇹🇼 繁體中文](./readme.md)
 
-# n8n Community Nodes Complete Guide | Build Custom Docker Images with Dozens of Extensions
+# SEO Automation | n8n AI Agent Auto-Generate Meta Title & Description
 
-![n8n Community Nodes Complete Guide | Build Custom Docker Images with Dozens of Extensions](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/42-n8n-community-node/cover.png?raw=true)
+![SEO Automation | n8n AI Agent Auto-Generate Meta Title & Description](https://github.com/qwedsazxc78/ai-automation-n8n/blob/main/n8n/42-n8n-community-node/cover.png?raw=true)
 
 ---
 
-## 【 3 Key Video Highlights】
+## 【 2 Key Video Highlights】
 
-* 1️⃣ **GUI Installation Guide**: Learn how to install community nodes directly from the n8n admin panel, simple and intuitive.
-* 2️⃣ **Top Community Nodes Strategy**: Top 10 must-have community nodes including MCP, LINE Webhook, PDF processing and more.
-* 3️⃣ **One-Click Docker Image Creation**: Build n8n docker images with 10+ community nodes, from Dockerfile writing, multi-platform builds to Docker Hub publishing - all in one go.
+* 1️⃣ **One-Click Meta Title & Description Generation**: Use n8n AI Agent to automatically scrape website content and batch generate SEO recommendations for multiple URLs.
+* 2️⃣ **Complete SEO AI Workflow Guide**: From Google Sheet triggers, HTML crawling, to SEO AI Agent recommendations - understand every core technique.
 
 ---
 
 ## 🎯 Goals
 
-* 🚀 Master quick installation of community nodes through n8n GUI interface, extend functionality with zero technical barriers.
-* 🛠️ Learn practical applications of popular community nodes to build enterprise-grade automation workflows.
-* 🎓 One-click build Docker images with 10+ community nodes for standardized deployment.
+- 🔥 Zero technical barriers to automatically generate site-wide Meta Title and Description, fully improving SEO ranking efficiency!
+- 🤖 Learn to build SEO AI Agent for fully automated website crawling, content analysis, and title/description optimization.
+- 📝 Batch process multiple URLs with efficient Google Sheet integration and synchronization.
 
 ---
 
 ## 🛠️ Use Cases
 
-* Quick start with n8n community nodes through GUI interface for easy installation.
-* Automation teams needing popular community node integration with LINE, MCP, PDF and other services.
-* Enterprises requiring standardized deployment with 10+ essential community nodes pre-packaged.
-* Developers wanting to create reusable Docker images to accelerate team collaboration.
+- Website owners wanting to quickly batch auto-generate SEO-friendly Meta Title & Description
+- Content marketing and SEO professionals needing to efficiently process SEO recommendations for multiple URLs
+- Beginners looking to learn n8n and AI Agent SEO automation best practices
 
 ---
 
 
 ## 🎥 What You'll Learn from the Video
 
-* **Complete GUI Installation Tutorial**: Step-by-step guide to install community nodes directly from n8n admin panel, done in 3 minutes.
-* **Top 10 Community Nodes Package**: Detailed explanation of essential nodes like MCP, LINE Webhook, PDF.co and their practical applications.
-* **Docker Image One-Click Packaging**: Dockerfile writing and multi-platform build techniques with 10+ pre-installed community nodes.
-* **Zero to Deployment Complete Process**: Including local testing, Docker Hub publishing, and production environment configuration.
+- 🚦 **SEO AI Agent Practical Tutorial**: Step-by-step guide to launch SEO AI Agent, letting the system automatically crawl all new URLs and generate optimized meta titles and descriptions!
+- 📒 **Google Sheet Integration Tips**: How to use URLs as primary keys, managing content data in batches for both manual and automatic events.
+- 🦾 **AI Content Smart Recommendations**: Utilize ChatGPT 4.1 mini to automatically generate professional SEO titles, descriptions, and keyword recommendations with optimized output format!
+- 🛟 **Community Resources + Real-time Support**: Video provides learning resources, LINE community, and support community for self-paced learning without getting stuck!
 
 ---
 
-## 🌟 Top 10 Popular n8n Community Nodes
+## 🚀 Quick Start n8n Automation Resource Pack
 
-🌟 **[Awesome N8N: Top 100 Community Nodes](https://github.com/restyler/awesome-n8n)**
+### 🎓 Learning & Community
 
-### 🤖 AI & Intelligent Integration
-* **MCP (Model Context Protocol)**: Deep integration with AI models like Claude, GPT
-* **Tavily AI Search**: Smart web search engine integration for precise information retrieval
+* 🔗 [Join AI Learning Community (Skool)](https://www.skool.com/ai-brain-alex/about?ref=5dde9b20e8e7432aa9a01df6e89685f4)
+  Build your AI and n8n learning path, get started effortlessly!
+* 🔗 [Join LINE Community to Master AI Together](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg)
+  Help each other progress! Build your own AI automation scenarios!
 
-### 📱 Communication & Social Platforms
-* **LINE Webhook**: Complete LINE messaging platform integration, supports group and personal messages
-* **Discord Triggers**: Listen to Discord events, build community automation bots
+### 📚 Learning Resources
 
-### 📄 Document & Content Processing
-* **PDF.co Integration**: Professional PDF processing, conversion and editing features
-* **Web Content Scraper**: Smart extraction of web information, supports dynamic content
-* **Document Generator**: Professional document creation supporting multiple formats
+* 🎥 [n8n AI Automation Workflow: From Basics to Advanced](https://youtube.com/playlist?list=PLUf88uk7T54I83MBdbuXgUuA8rVklF4FA&si=wHsQw8YJu-erSdLd)
+  YouTube tutorial series, learn by doing and get started quickly!
+* ⏱️ [Learn n8n in Bite-sized Time](https://youtube.com/playlist?list=PLUf88uk7T54Iv6LV2NFgdTghaX2cPhtgH&si=G3gj2qn179ZFUqAZ)
+  5 minutes a day to learn, build automation habits effortlessly.
+* 🚀 [AI High Productivity](https://www.youtube.com/playlist?list=PLUf88uk7T54KokZQSM_YRJHtou-GxucZ2)
+  Master AI tools to improve work efficiency and build a high-productivity system.
 
-### 🛠️ Utility Tools
-* **QR Code Generator**: Quick generation and parsing of QR codes
-* **Advanced Image Editor**: Support for various image processing operations
-* **Ragic Integration**: Taiwan's local online database system connection
+### 🛠️ Deployment & Tools
+
+* 🧩 [zeabur n8n Deployment Template (Always Updated)](https://zeabur.com/zh-TW/templates/0TUVZ7?referralDesktop=qwedsazxc78)
+  Zero setup pressure, click to deploy and use, suitable for beginners and advanced users.
+* 🌐 [n8n Official Website](https://n8n.io/)
+  Learn more features and documentation, stay updated with the latest releases.
 
 ---
 
-## 📦 Quick Start Local Test Environment
-
-Want to use an environment with 10+ pre-installed community nodes? Just three steps:
-
-```bash
-# 1. Enter community node directory
-cd local-ai/community/
-
-# 2. Set environment variables
-cp .env.example .env
-# Edit .env configuration file (default values can be used)
-
-# 3. Start complete environment
-docker-compose up -d
-
-# Access n8n: http://localhost:5678
-# Default login: admin/adminpass
-```
-
-This environment includes:
-* ✅ Latest n8n version
-* ✅ PostgreSQL database persistence
-* ✅ Pre-installed 10+ popular community nodes (MCP, LINE, PDF, etc.)
-* ✅ Multi-platform support (automatic architecture selection)
