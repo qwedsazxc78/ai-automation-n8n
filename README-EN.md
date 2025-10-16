@@ -236,6 +236,12 @@ docker-compose up -d
 43. [SMB Customer Management | n8n Automates Quotes for 5 Companies at Once](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/43-smb-quote-automation)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
 
+44. [SEO Automation | n8n AI Agent Auto-Generate Meta Title & Description](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/44-seo-meta-td-ai-agent)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/4dvSAVwc4uE)
+
+45. [Understanding OpenAI's 3 Major Agent Development Tools in 12 Minutes: Agent Builder, Agent Kit, Chat Kit](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/45-openai-agent-builder)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/aRXcMShImuc)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start

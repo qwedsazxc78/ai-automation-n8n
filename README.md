@@ -243,6 +243,12 @@ docker-compose up -d
 43.  [中小企業客戶管理｜n8n 一次搞定 5 家公司報價單自動化](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/43-smb-quote-automation)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/mF5qGe-hagc)
 
+44.  [SEO 自動化｜n8n AI Agent 一鍵生成 Meta Title & Description](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/44-seo-meta-td-ai-agent)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/4dvSAVwc4uE)
+
+45.  [12分鐘搞懂 Open AI 最新 3大 Agent 開發利器 Agent Builder、Agent Kit、Chat Kit](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/45-openai-agent-builder)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/aRXcMShImuc)
+
 ## ❗ 常見問題排解 Troubleshooting
 
 ### n8n 無法啟動
