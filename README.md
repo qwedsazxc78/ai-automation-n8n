@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **繁體中文**: 包含35+個AI驅動的n8n工作流程自動化範例的 n8n 專案，從發票處理到AI代理整合！適合學習n8n工作流程自動化的你。
+> 🌍 **繁體中文**: 包含45+個AI驅動的n8n工作流程自動化範例的 n8n 專案，從發票處理到AI代理整合！適合學習n8n工作流程自動化的你。
 
 ## 📂 連結快速入口
 
@@ -248,6 +248,9 @@ docker-compose up -d
 
 45.  [12分鐘搞懂 Open AI 最新 3大 Agent 開發利器 Agent Builder、Agent Kit、Chat Kit](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/45-openai-agent-builder)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/aRXcMShImuc)
+
+46.  [3個概念，馬上搞懂 RAG 知識庫是什麼](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/46-rag-3-concept)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/OYovSGS7joA)
 
 ## ❗ 常見問題排解 Troubleshooting
 

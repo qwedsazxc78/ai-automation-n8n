@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁体中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **简体中文**: 包含35+个AI驱动的n8n工作流程自动化范例的 n8n 项目，从发票处理到AI代理集成！适合学习n8n工作流程自动化的你。
+> 🌍 **简体中文**: 包含45+个AI驱动的n8n工作流程自动化范例的 n8n 项目，从发票处理到AI代理集成！适合学习n8n工作流程自动化的你。
 
 ## 📂 快速链接
 
@@ -241,6 +241,9 @@ docker-compose up -d
 
 45. [12分钟搞懂 Open AI 最新 3大 Agent 开发利器 Agent Builder、Agent Kit、Chat Kit](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/45-openai-agent-builder)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/aRXcMShImuc)
+
+46. [3个概念，马上搞懂 RAG 知识库是什么](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/46-rag-3-concept)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/OYovSGS7joA)
 
 ## ❗ 常见问题排解
 

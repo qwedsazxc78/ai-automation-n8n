@@ -2,7 +2,7 @@
 
 > 🌍 **Language / 语言 / 語言**: [🇺🇸 English](./README-EN.md) | [🇨🇳 简体中文](./README-CN.md) | [🇹🇼 繁體中文](./README.md) | [📖 Language Guide](./docs/Language-Guide.md)
 
-> 🌍 **English**: An n8n project featuring 35+ AI-powered workflow automation examples, from invoice processing to AI agent integrations! Perfect for learning n8n workflow automation.
+> 🌍 **English**: An n8n project featuring 45+ AI-powered workflow automation examples, from invoice processing to AI agent integrations! Perfect for learning n8n workflow automation.
 
 ## 📂 Quick Links
 
@@ -241,6 +241,9 @@ docker-compose up -d
 
 45. [Understanding OpenAI's 3 Major Agent Development Tools in 12 Minutes: Agent Builder, Agent Kit, Chat Kit](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/45-openai-agent-builder)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/aRXcMShImuc)
+
+46. [Understanding RAG Knowledge Base in 3 Core Concepts](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/46-rag-3-concept)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/OYovSGS7joA)
 
 ## ❗ Troubleshooting
 
