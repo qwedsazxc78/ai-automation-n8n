@@ -245,6 +245,12 @@ docker-compose up -d
 46. [Understanding RAG Knowledge Base in 3 Core Concepts](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/46-rag-3-concept)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/OYovSGS7joA)
 
+47. [How to Use RAG Knowledge Base: n8n RAG Agent & NotebookLM Demo](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/47-rag-n8n-notebooklm)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/sZlhQQ4XTIM)
+
+48. [Your First n8n RAG AI Agent with Qdrant Vector Database](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/48-rag-qdrant-ai-agent)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/0fpAx3WqEos)
+
 ## ❗ Troubleshooting
 
 ### n8n Won't Start

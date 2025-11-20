@@ -245,6 +245,12 @@ docker-compose up -d
 46. [3个概念，马上搞懂 RAG 知识库是什么](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/46-rag-3-concept)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/OYovSGS7joA)
 
+47. [RAG 知识库怎么用，n8n RAG Agent 与 NotebookLM 示范](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/47-rag-n8n-notebooklm)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/sZlhQQ4XTIM)
+
+48. [第一个 n8n RAG AI Agent 就上手，使用 Qdrant 向量数据库](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/48-rag-qdrant-ai-agent)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/0fpAx3WqEos)
+
 ## ❗ 常见问题排解
 
 ### n8n 无法启动
