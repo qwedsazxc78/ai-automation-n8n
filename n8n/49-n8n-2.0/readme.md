@@ -19,7 +19,7 @@
 ## 🎯 目標
 
 * 讓你在 **一支影片內掌握 n8n 2.0 核心變更**，知道「為什麼要升級」以及「升級後差在哪」。
-* 學會 **如何安全地從 1.x 升級到 2.0.2**，並懂得檢查 workflow / instance 是否受影響。
+* 學會 **如何安全地從 1.x 升級到 2.1.1**，並懂得檢查 workflow / instance 是否受影響。
 * 搞懂 **五大重點：安全性、可靠度、效能、部署流程、子流程行為**，避免升級後踩雷。
 * 幫助企業或團隊技術負責人，能向內部解釋 **n8n 2.0 對資安與營運的實際價值**。
 
@@ -100,14 +100,14 @@
 * 影片示範 **n8n 的 Migration Report 功能**：
   * 可以看到 **哪些 workflow / instance 可能會被 2.0 的變更影響**。
   * 針對風險項目逐一修正後，再決定是否升級。
-* 實際升級步驟教學（以 2.0.2 為例）：
-  1. 在專案的 n8n 設定中選擇版本 2.0.2。
+* 實際升級步驟教學（以 2.1.1 為例）：
+  1. 在專案的 n8n 設定中選擇版本 2.1.1。
   2. 觀察 log，確認 DB migration 是否順利（資料表同步升級）。
   3. 若升級中服務啟動失敗：
      * 到 Setting 將服務設為 **Suspend（暫停）**。
-     * 切換到 2.0.2 後再重新啟動服務。
+     * 切換到 2.1.1 後再重新啟動服務。
   4. 升級完成後：
-     * 刷新版本頁面，確認已在 2.0.2。
+     * 刷新版本頁面，確認已在 2.1.1。
      * 逐一檢查關鍵 workflow 是否正常運作。
 * 若遇到問題：
   * 可依照 Migration Report 提示，分別從 **workflow 層級 / instance 層級** 排錯。
@@ -142,3 +142,67 @@
   不想自己架伺服器？一鍵部署 n8n，適合初學者到進階使用者。
 * 🌐 [n8n 官方網站](https://n8n.io/)
   查看最新版本、Release Note、文件與社群資源。
+
+---
+
+## 🐳 本地 Docker 升級至 n8n 2.0
+
+若你使用本專案的 **local-ai/basic** 進行本地部署，可以參考以下步驟升級至 n8n 2.0：
+
+### 📁 本地部署資源
+
+* 📂 [local-ai/basic](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/local-ai/basic) - 本地 Docker Compose 部署設定
+
+### 🔄 升級步驟
+
+```bash
+# 1. 進入 local-ai/basic 目錄
+cd local-ai/basic
+
+# 2. 停止現有服務
+docker-compose down
+
+# 3. 拉取最新 n8n 映像檔（包含 2.0 版本）
+docker pull n8nio/n8n:latest
+
+# 4. 或指定特定版本（例如 2.1.1）
+# docker pull n8nio/n8n:2.1.1
+
+# 5. 重新啟動服務
+docker-compose up -d
+
+# 6. 查看升級日誌，確認 DB migration 是否順利
+docker-compose logs -f n8n
+```
+
+### ⚠️ 升級前注意事項
+
+1. **備份資料**：升級前建議先備份 PostgreSQL 資料庫與 n8n volume
+   ```bash
+   # 備份 PostgreSQL 資料
+   docker exec n8n-postgres pg_dump -U n8n n8n > backup_$(date +%Y%m%d).sql
+   ```
+
+2. **確認相容性**：n8n 2.0 移除了 MySQL/MariaDB 支援，本專案的 local-ai/basic 已使用 PostgreSQL，可直接升級
+
+3. **檢查 Migration Report**：升級後登入 n8n，查看是否有任何 workflow 受到影響
+
+4. **測試關鍵 workflow**：升級完成後，逐一測試重要的自動化流程
+
+### 🎯 指定版本升級
+
+若要升級至特定版本，修改 `docker-compose.yml` 中的映像檔標籤：
+
+```yaml
+# 原本（使用最新版）
+image: n8nio/n8n:latest
+
+# 改為指定版本
+image: n8nio/n8n:2.1.1
+```
+
+然後執行：
+
+```bash
+docker-compose up -d --force-recreate
+```

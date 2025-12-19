@@ -19,7 +19,7 @@
 ## 🎯 Goals
 
 * Master n8n 2.0 core changes **in a single video**, understanding "why upgrade" and "what's different after upgrading".
-* Learn **how to safely upgrade from 1.x to 2.0.2**, and know how to check if workflow / instance is affected.
+* Learn **how to safely upgrade from 1.x to 2.1.1**, and know how to check if workflow / instance is affected.
 * Understand **the five key points: security, reliability, performance, deployment process, sub-workflow behavior**, avoiding pitfalls after upgrading.
 * Help enterprise or team technical leaders explain **the practical value of n8n 2.0 for security and operations** internally.
 
@@ -100,14 +100,14 @@ This video is particularly suitable for:
 * Video demonstrates **n8n's Migration Report feature**:
   * Can see **which workflows / instances might be affected by 2.0 changes**.
   * Fix risk items one by one, then decide whether to upgrade.
-* Actual upgrade steps tutorial (using 2.0.2 as example):
-  1. Select version 2.0.2 in project's n8n settings.
+* Actual upgrade steps tutorial (using 2.1.1 as example):
+  1. Select version 2.1.1 in project's n8n settings.
   2. Observe logs, confirm if DB migration is successful (data tables sync upgrade).
   3. If service fails to start during upgrade:
      * Go to Settings and set service to **Suspend**.
-     * Switch to 2.0.2 then restart service.
+     * Switch to 2.1.1 then restart service.
   4. After upgrade completes:
-     * Refresh version page, confirm you're on 2.0.2.
+     * Refresh version page, confirm you're on 2.1.1.
      * Check critical workflows one by one to ensure they work normally.
 * If problems occur:
   * Follow Migration Report prompts to troubleshoot from **workflow level / instance level** respectively.
@@ -142,3 +142,67 @@ If you've watched the video and want to actually use n8n 2.0 in daily work and p
   Don't want to set up your own server? One-click deploy n8n, suitable for beginners to advanced users.
 * 🌐 [n8n Official Website](https://n8n.io/)
   View latest versions, Release Notes, documentation and community resources.
+
+---
+
+## 🐳 Local Docker Upgrade to n8n 2.0
+
+If you're using our **local-ai/basic** setup for local deployment, follow these steps to upgrade to n8n 2.0:
+
+### 📁 Local Deployment Resources
+
+* 📂 [local-ai/basic](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/local-ai/basic) - Local Docker Compose deployment configuration
+
+### 🔄 Upgrade Steps
+
+```bash
+# 1. Navigate to local-ai/basic directory
+cd local-ai/basic
+
+# 2. Stop existing services
+docker-compose down
+
+# 3. Pull latest n8n image (includes 2.0 version)
+docker pull n8nio/n8n:latest
+
+# 4. Or specify a specific version (e.g., 2.1.1)
+# docker pull n8nio/n8n:2.1.1
+
+# 5. Restart services
+docker-compose up -d
+
+# 6. View upgrade logs, confirm DB migration is successful
+docker-compose logs -f n8n
+```
+
+### ⚠️ Pre-Upgrade Checklist
+
+1. **Backup Data**: Before upgrading, backup your PostgreSQL database and n8n volume
+   ```bash
+   # Backup PostgreSQL data
+   docker exec n8n-postgres pg_dump -U n8n n8n > backup_$(date +%Y%m%d).sql
+   ```
+
+2. **Confirm Compatibility**: n8n 2.0 removed MySQL/MariaDB support. Our local-ai/basic already uses PostgreSQL, so you can upgrade directly
+
+3. **Check Migration Report**: After upgrading, login to n8n and check if any workflows are affected
+
+4. **Test Critical Workflows**: After upgrade completes, test your important automation workflows one by one
+
+### 🎯 Upgrade to Specific Version
+
+To upgrade to a specific version, modify the image tag in `docker-compose.yml`:
+
+```yaml
+# Original (using latest)
+image: n8nio/n8n:latest
+
+# Change to specific version
+image: n8nio/n8n:2.1.1
+```
+
+Then execute:
+
+```bash
+docker-compose up -d --force-recreate
+```
