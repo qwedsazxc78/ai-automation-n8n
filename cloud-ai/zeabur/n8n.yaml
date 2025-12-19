@@ -22,7 +22,7 @@ spec:
   readme: |-
     # n8n - AI Automation Platform
 
-    **Current Version:** 2.0.1
+    **Current Version:** 2.0.2
 
     What is n8n?
 
@@ -162,7 +162,7 @@ spec:
       template: PREBUILT
       spec:
         source:
-          image: n8nio/n8n:2.0.1
+          image: n8nio/n8n:2.0.2
         ports:
           - id: web
             port: 5678
@@ -220,7 +220,7 @@ localization:
     readme: |
       # n8n - AI 自动化平台
 
-      **当前版本：** 2.0.1
+      **当前版本：** 2.0.2
 
       ## 什么是 n8n？
 
@@ -247,7 +247,7 @@ localization:
     readme: |
       # n8n - AI 自動化平台
 
-      **目前版本：** 2.0.1
+      **目前版本：** 2.0.2
 
       ## 什麼是 n8n？
 

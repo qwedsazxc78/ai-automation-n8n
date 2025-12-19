@@ -251,6 +251,9 @@ docker-compose up -d
 48. [第一个 n8n RAG AI Agent 就上手，使用 Qdrant 向量数据库](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/48-rag-qdrant-ai-agent)
 [![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/0fpAx3WqEos)
 
+49. [n8n 2.0 五大重点功能与无痛升级教学](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/49-n8n-2.0)
+[![YouTube](https://img.shields.io/badge/Watch%20on-YouTube-red?logo=youtube)](https://youtu.be/NH_TdarJX44)
+
 ## ❗ 常见问题排解
 
 ### n8n 无法启动
