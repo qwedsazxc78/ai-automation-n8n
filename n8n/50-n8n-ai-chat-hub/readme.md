@@ -8,7 +8,7 @@
 ## 📌 5 大影片重點
 
 1. **多模型統一介面** — 一個 Chat Hub 切換 OpenAI、Claude、Gemini，維持對話脈絡
-2. **![alt text](EP50.png)** — 語音輸入、檔案上傳、網路搜尋（Jina AI / SERP API）開箱即用
+2. **內建功能** — 語音輸入、檔案上傳、網路搜尋（Jina AI / SERP API）開箱即用
 3. **Personal Agent** — 像客製化 GPT，設定 System Prompt 打造專屬翻譯機、助理
 4. **Workflow Agent** — 把現有 n8n 工作流無痛轉換成對話式 AI Agent
 5. **企業級權限管理** — Chat only 角色讓非技術人員安全使用自動化工作流
