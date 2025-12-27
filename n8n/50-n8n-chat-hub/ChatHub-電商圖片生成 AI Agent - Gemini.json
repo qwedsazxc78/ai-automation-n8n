@@ -1,0 +1,415 @@
+{
+  "name": "Lab6-電商圖片生成 AI Agent - Gemini",
+  "nodes": [
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.body.events[0].source.userId || $json.sessionId }} ",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        64,
+        768
+      ],
+      "id": "7aa1f21f-d53f-4012-ab8a-c577def207e4",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "description": "=你是「商業資料分析師」，負責將使用者提供的商品資訊進行整理、分析與優化，生成適合外部API（如OpenAI Image Generation）使用的高品質英文描述。\n\n你的工作流程如下：\n\n1. 依序確認以下三個核心資訊是否完整：\n   - 商品種類（顏色、材質、風格）\n   - 模特兒特徵（性別、年齡感、風格、表情）\n   - 背景環境（場景敘述）\n   - 資訊如果沒有完整收集，請向使用者要求更多資訊\n\n2. 若資訊有缺漏，自行合理補齊（推測常見合理預設），但在必要時保持模糊以避免錯誤\n\n3. 將以上資訊整合成：\n   - 一段流暢自然的英文Prompt\n   - 自動加入提升品質的描述（如 \"high-quality\", \"photo studio lighting\", \"professional photography style\"）\n\n4. 確保輸出的Prompt語氣自然、有吸引力，適合商品展示\n\n禁止事項：\n- 不呼叫外部API\n- 不做圖片生成\n- 專注於商業邏輯推演與高質Prompt撰寫\n\n（範例：將「白色T恤、年輕女性、咖啡館背景」整理成完整英文Prompt）\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "typeVersion": 1,
+      "position": [
+        304,
+        768
+      ],
+      "id": "032d5ec1-64a7-4bde-90e1-ddb65943dd36",
+      "name": "Think"
+    },
+    {
+      "parameters": {
+        "content": "## Thinking\n\n",
+        "height": 220,
+        "width": 230,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        224,
+        688
+      ],
+      "id": "b9898863-3e19-4611-a50a-304b8f2de1ba",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -160,
+        768
+      ],
+      "id": "081b6728-00e4-4c98-931f-1ee160ce4618",
+      "name": "OpenAI 4.1",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## 記憶\n\n",
+        "height": 220,
+        "width": 210,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        688
+      ],
+      "id": "57869dc5-a9d2-41f7-b704-e945fd16df39",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"prompt\": \"California\",\n\t\"image_numbers\": 1\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        544,
+        768
+      ],
+      "id": "b4d725db-1b3d-499c-ac9c-03099d6d2a81",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "content": "## 結構化輸出\n\n",
+        "height": 220,
+        "width": 230,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        464,
+        688
+      ],
+      "id": "c0c3cedc-c36f-4331-b0d9-9c02a9c0e6ea",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## 產生圖片 ＋ 寄送郵件給自己\n\n",
+        "height": 280,
+        "width": 770
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        432,
+        304
+      ],
+      "id": "b4ee7e74-0f23-4764-bf6d-5d9ae243ae1a",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "## LLM - GPT 4.1\n\n",
+        "height": 220,
+        "width": 210,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -224,
+        688
+      ],
+      "id": "12694295-31be-4198-ab9f-eff6dfb9fda1",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## 圖片對話\n\n### 範例一\n請生成紅色的洋裝商品\n25-30歲的亞洲女性\n在晴朗的海邊\n\n### 範例二\n請生成帥氣的太陽眼鏡商品\n35-40歲的歐洲男性\n在地鐵站",
+        "height": 320,
+        "width": 510
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -496,
+        272
+      ],
+      "id": "7769ffea-daaf-4e29-b5e2-035b0d0fc733",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "name": "=Gemini-imagen4-電商商品範例-{{ $now }}.png\n",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "https://drive.google.com/drive/folders/1-xIFNFIVOnehs1ZK6fRmyz7JvAl0H8xq",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        688,
+        400
+      ],
+      "id": "d76f5417-24a4-4f1e-9ca8-1e8d04d99b48",
+      "name": "Upload Image",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "FOJsxE5vAvlfyH16",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "ai.brain.alex@gmail.com",
+        "subject": "Lab6-圖片生成 AI Agent",
+        "emailType": "text",
+        "message": "=Hi,\n\n生成ok了喔，讚\n你完成lab了\n\n圖片名稱：{{ $json.name }}\nhttps://drive.google.com/drive/folders/1-xIFNFIVOnehs1ZK6fRmyz7JvAl0H8xq ",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        880,
+        400
+      ],
+      "id": "402268cf-3feb-486f-8448-7b4fd1999576",
+      "name": "Gmail",
+      "webhookId": "6f49515e-39e1-4721-a18f-3809c2de3778",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "xhKbueCrvtZ602Y6",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "modelId": {
+          "__rl": true,
+          "value": "models/imagen-4.0-fast-generate-001",
+          "mode": "list",
+          "cachedResultName": "models/imagen-4.0-fast-generate-001"
+        },
+        "prompt": "={{ $json.output.prompt }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        464,
+        400
+      ],
+      "id": "f9f6f05d-672b-4ddb-9f41-655b19ca092a",
+      "name": "Generate an image1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "YTi08zt9SSPHxDEj",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "availableInChat": true,
+        "agentName": "Lab6-電商圖片生成 AI Agent - Gemini",
+        "options": {
+          "responseMode": "streaming"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -144,
+        400
+      ],
+      "id": "1cc828fa-0a11-48c0-9c36-9c76878c36fc",
+      "name": "When chat message received",
+      "webhookId": "ab0273ab-8bca-4b62-8541-fead2b038007"
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "你是一個業務分析師，產生電商的圖片與商品描述，幫助銷售\n請根據用戶需求產生 open ai 的 gpt-image-1 api 的 prompt\n\n## 任務\n1. 接收從內部 Think Tool 處理完的正式提示（Prompt）\n2. 根據收到的Prompt，調用\"HTTP Request 圖片生成工具\" API來生成圖片\n3. 成功後將生成的 base64 string，往後輸出到成功流程方便後續存成圖片\n\n記住：  \n- 不自行更改Prompt  \n- 不進行商業邏輯推論  \n- 專注執行與外部服務交互\n\n輸出json 格式\n{\n\t\"prompt\": \"Output prompt\",\n\t\"image_numbers\": 1\n}",
+          "enableStreaming": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        96,
+        400
+      ],
+      "id": "c89b27c2-23f8-4d17-b99d-c88e48fe5abb",
+      "name": "Image Prompt Agent"
+    }
+  ],
+  "pinData": {
+    "When chat message received": [
+      {
+        "json": {
+          "sessionId": "aa1e8a9b5d07489db328a227ce797a6d",
+          "action": "sendMessage",
+          "chatInput": "請生成紅色的洋裝商品\n25-30歲的亞洲女性\n在晴朗的海邊"
+        },
+        "pairedItem": {
+          "item": 0
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Think": {
+      "ai_tool": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI 4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Image": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate an image1": {
+      "main": [
+        [
+          {
+            "node": "Upload Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Agent": {
+      "main": [
+        [
+          {
+            "node": "Generate an image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Taipei",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 900,
+    "errorWorkflow": "0fS0IZwY5xyvbexo"
+  },
+  "versionId": "6ad9001c-a7a5-4f05-ae89-c8ce7444b078",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98fc6998a4fc974191a50fd1e28f3c93149311bffb0a029723a4889a4111c908"
+  },
+  "id": "8IdAMhfOyiqtAVfi",
+  "tags": [
+    {
+      "updatedAt": "2025-02-20T10:56:36.149Z",
+      "createdAt": "2025-02-20T10:56:36.149Z",
+      "id": "qc8YQ51rp9Uf0sOf",
+      "name": "prd"
+    },
+    {
+      "updatedAt": "2025-03-17T08:20:06.861Z",
+      "createdAt": "2025-03-17T08:20:06.861Z",
+      "id": "pvRmfUcHdkTEgrk9",
+      "name": "yt"
+    }
+  ]
+}

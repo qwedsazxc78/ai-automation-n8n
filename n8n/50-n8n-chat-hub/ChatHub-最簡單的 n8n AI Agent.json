@@ -1,0 +1,171 @@
+{
+  "name": "Lab5-最簡單的 n8n AI Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## 使用 open ai chat model 呼叫 OpenAI API \n",
+        "height": 436,
+        "width": 814,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -752,
+        -192
+      ],
+      "id": "e6c87459-f5d8-4060-bd9b-e76df7147fe2",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -272,
+        96
+      ],
+      "id": "1c698a66-3141-462f-bb68-e5a30aba1ee7",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -400,
+        96
+      ],
+      "id": "e52710d4-e10b-4152-a75a-53851e512c3c",
+      "name": "OpenAI - 4.1",
+      "credentials": {
+        "openAiApi": {
+          "id": "vo1Kz0pllXw8z5Cv",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        -144,
+        96
+      ],
+      "id": "f5cbe90b-c20e-44be-b561-ed82eee38cca",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {
+        "availableInChat": true,
+        "agentName": "Lab5-最簡單的 n8n AI Agent",
+        "agentDescription": "計算機工具",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        -544,
+        -128
+      ],
+      "id": "82659a0d-fc0c-4908-8767-7302fc9e1d6b",
+      "name": "When chat message received",
+      "webhookId": "4d1dee75-aba4-4a90-a01a-3074179d6019"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "# 任務\n您是一位貼心助理，請根據使用者的需求，提供簡短且清晰的回覆。由於回覆將透過手機語音播放，避免使用如「\\n」等符號，防止語音播放時發生不必要的中斷。\n\n# 背景\n今天是：{{ $now.format('dd LLL yy') }}。\n當前時間：{{ $now.format('h:mm a') }}（台灣時間）。\n語言：繁體中文。\n當被詢問時，請表明自己是以 n8n 流程運行的 AI Agent。\n\n# 工具\n當用戶詢問計算題時，請使用 Tool Calculator 來幫忙計算\n\n# 回覆要求\n保持回覆簡短清晰，適合語音播放。\n避免產生錯誤資訊，如無法回答，請直接回覆「我不知道」。\n回覆內容應以繁體中文輸出。"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -336,
+        -128
+      ],
+      "id": "c320d4f8-1896-4419-9ddd-d47443e784a1",
+      "name": "AI Agent1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI - 4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "42fbf307-1290-492b-a200-234471de7ae9",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "98fc6998a4fc974191a50fd1e28f3c93149311bffb0a029723a4889a4111c908"
+  },
+  "id": "z0A82SB0f28W3rYQ",
+  "tags": [
+    {
+      "updatedAt": "2025-03-17T08:20:06.861Z",
+      "createdAt": "2025-03-17T08:20:06.861Z",
+      "id": "pvRmfUcHdkTEgrk9",
+      "name": "yt"
+    },
+    {
+      "updatedAt": "2025-05-02T09:24:01.604Z",
+      "createdAt": "2025-05-02T09:23:49.693Z",
+      "id": "ruZISO7qXZnb0jBG",
+      "name": "n8n-101"
+    }
+  ]
+}
