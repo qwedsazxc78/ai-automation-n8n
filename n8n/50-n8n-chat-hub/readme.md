@@ -85,7 +85,7 @@
 | 資源 | 連結 |
 |------|------|
 | 📂 GitHub 模板 | [50-n8n-ai-chat-hub](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/50-n8n-ai-chat-hub) |
-| 🎓 Skool 社群 | [AI 相談室](https://www.skool.com/ai-brain-alex) |
+| 🎓 Skool 社群 | [AI 相談室](https://www.skool.com/ai-brain-alex?ref=5dde9b20e8e7432aa9a01df6e89685f4) |
 | 💬 LINE 社群 | [加入群組](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg) |
 | 📋 名單磁鐵 | [免費資源](https://nifty-scale-675.notion.site/1fbbc76657488098a5dfee1d639679eb) |
 | 🚀 Zeabur 部署 | [立即部署](https://zeabur.com?referralCode=qwedsazxc78) |

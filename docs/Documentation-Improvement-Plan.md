@@ -272,7 +272,7 @@ graph TD
 ### Q9: 除了這個專案，還有哪些學習資源？
 **A**:
 - 📺 [YouTube 頻道](https://www.youtube.com/channel/UCDMJaaMu3nGNc7bNKMAtS7Q) - 48+ 教學影片
-- 💬 [Skool 社群](https://www.skool.com/ai-brain-alex) - 問答討論
+- 💬 [Skool 社群](https://www.skool.com/ai-brain-alex?ref=5dde9b20e8e7432aa9a01df6e89685f4) - 問答討論
 - 💬 [LINE 社群](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg) - 即時互動
 - 📖 [n8n 官方文件](https://docs.n8n.io/) - 英文技術文件
 

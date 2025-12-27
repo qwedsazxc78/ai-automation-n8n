@@ -85,7 +85,7 @@
 | Resource | Link |
 |----------|------|
 | 📂 GitHub Template | [50-n8n-ai-chat-hub](https://github.com/qwedsazxc78/ai-automation-n8n/tree/main/n8n/50-n8n-ai-chat-hub) |
-| 🎓 Skool Community | [AI Consultation Room](https://www.skool.com/ai-brain-alex) |
+| 🎓 Skool Community | [AI Consultation Room](https://www.skool.com/ai-brain-alex?ref=5dde9b20e8e7432aa9a01df6e89685f4) |
 | 💬 LINE Community | [Join Group](https://line.me/ti/g2/ZypIgLSzVPweRBgBqKvaRU10WEmnotuZOr7Lpg) |
 | 📋 Lead Magnet | [Free Resources](https://nifty-scale-675.notion.site/1fbbc76657488098a5dfee1d639679eb) |
 | 🚀 Zeabur Deployment | [Deploy Now](https://zeabur.com?referralCode=qwedsazxc78) |
